@@ -1,0 +1,17 @@
+---
+alias: Xbox - Event - Gaming mode yes
+
+trigger:
+  - platform: event
+    event_type:
+      - mobile_app_notification_action
+
+condition:
+  - condition: template
+    value_template: "{{ trigger.event.data.action == 'xbox_gaming_mode_yes' }}"
+
+action:
+- alias: "Turn on gaming mode"
+  service: scene.turn_on
+  target:
+    entity_id: scene.bedroom_xbox
