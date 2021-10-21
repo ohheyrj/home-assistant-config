@@ -20,4 +20,3 @@ action:
           title: 'Yes'
         - action: 'xbox_gaming_mode_no'
           title: 'No'
-
