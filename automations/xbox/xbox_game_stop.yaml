@@ -1,0 +1,24 @@
+---
+alias: Xbox - Game Stop
+
+trigger:
+  - platform: state
+    entity_id: binary_sensor.rj175_in_game
+    from: "on"
+    to: "off"
+
+action:
+- alias: "Send Message to Phone"
+  service: notify.mobile_app_richard_samsung_phone
+  data:
+    message: 'Xbox game finished, set lights?'
+    data:
+      ttl: 0
+      priority: 'high'
+      actions:
+        - action: 'xbox_lights_dimmed'
+          title: 'Dimmed'
+        - action: 'xbox_lights_on'
+          title: 'On'
+        - action: 'xbox_lights_off'
+          title: 'Off'
