@@ -1,0 +1,26 @@
+---
+alias: Bedroom - Movie Paused
+id: da6b5158-8e72-4e26-9339-a1efc7d84d1f
+trigger:
+  platform: state
+  entity_id:
+    - media_player.bedroom_tv
+  to: 'paused'
+  from: 'playing'
+
+condition:
+  - alias: "Movie scene is enabled"
+    condition: state
+    entity_id: input_boolean.bedroom_movie_scene
+    state: "on"
+
+action:
+  - alias: "Send message to TV"
+    service: notify.bedroom_tv
+    data:
+      message: "Turning light up, hope you're enjoying the film!"
+      data:
+        color: 'pink'
+        position: 'center'
+  - service: scene.turn_on
+    entity_id: scene.bedroom_lights_dimmed

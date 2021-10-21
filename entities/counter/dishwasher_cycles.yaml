@@ -1,0 +1,5 @@
+---
+dishwasher_cycles:
+  name: Dishwasher Cycle Count
+  icon: mdi:dishwasher
+  step: 1

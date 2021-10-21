@@ -1,0 +1,8 @@
+---
+name: Hall Lights Off
+icon: mdi:lightbulb-off-outline
+entities:
+  light.hall_lamp:
+    state: 'off'
+  light.hallway_light:
+    state: 'off'

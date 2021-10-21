@@ -1,0 +1,9 @@
+---
+platform: mqtt
+schema: json
+name: Kitchen Lights
+command_topic: "zigbee2mqtt/Kitchen Lights/set"
+state_topic: "zigbee2mqtt/Kitchen Lights"
+brightness: true
+color_temp: true
+effect: true

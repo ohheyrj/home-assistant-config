@@ -1,0 +1,17 @@
+---
+spotify_motivation_mix_bedroom_echo:
+  alias: "Spotify - Motivation Mix - Bedroom Echo"
+  icon: mdi:run-fast
+  sequence:
+    - service: switch.turn_on
+      target:
+        entity_id: switch.richard_s_echo_dot_shuffle_switch
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.richard_s_echo_dot
+        media_content_id: 'Motivation Mix'
+        media_content_type: 'SPOTIFY'
+    - service: media_player.volume_set
+      data:
+        volume_level: 0.20
+        entity_id: media_player.richard_s_echo_dot

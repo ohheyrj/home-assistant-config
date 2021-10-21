@@ -1,0 +1,22 @@
+---
+alias: Xbox - Chromecast Playing
+
+trigger:
+  - platform: state
+    entity_id:
+      - media_player.bedroom_tv
+    to: 'playing'
+
+condition:
+  - alias: "Xbox is already on"
+    condition: state
+    entity_id: media_player.bedroom_xbox
+    state: "on"
+
+action:
+  - service: media_player.play_media
+    data:
+      media_content_id: "TV"
+      media_content_type: ""
+    target:
+      entity_id: media_player.bedroom_xbox

@@ -1,0 +1,12 @@
+---
+psb:
+  name: Pi Status Board
+  options:
+    - available
+    - away
+    - do_not_disturb
+    - idle
+    - learning
+    - meeting
+    - sleeping
+  icon: mdi:raspberry-pi

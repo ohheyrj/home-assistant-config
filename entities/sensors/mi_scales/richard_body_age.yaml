@@ -1,0 +1,7 @@
+---
+platform: mqtt
+name: "Richard Metabolic Age"
+state_topic: "miscale/Richard/metabolic_age"
+value_template: "{{ value_json['metabolic_age'] }}"
+json_attributes_topic: "miscale/Richard/metabolic_age"
+icon: mdi:human

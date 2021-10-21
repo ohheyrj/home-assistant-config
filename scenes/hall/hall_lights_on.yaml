@@ -1,0 +1,12 @@
+---
+name: Hall Lights On
+icon: mdi:lightbulb-on-outline
+entities:
+  light.hall_lamp:
+    brightness: 20
+    color_temp: 300
+    state: 'on'
+  light.hallway_light:
+    brightness: 255
+    color_name: 'white'
+    state: 'on'

@@ -1,0 +1,8 @@
+---
+washing_machine_pods:
+  name: Washing Machine Pods
+  min: 0
+  max: 150
+  step: 1
+  mode: box
+  icon: mdi:washing-machine

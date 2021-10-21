@@ -1,0 +1,5 @@
+---
+washing_machine_cycles:
+  name: Washing Machine Cycle Count
+  icon: mdi:washing-machine
+  step: 1

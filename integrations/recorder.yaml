@@ -1,0 +1,6 @@
+---
+recorder:
+  db_url: !secret mysql_db_url
+  exclude:
+    domains:
+      - automation

@@ -1,0 +1,10 @@
+---
+washing_machine_status:
+  name: Washing Machine Status
+  options:
+    - Standby
+    - Idle
+    - Running
+    - Finished
+  initial: Standby
+  icon: mdi:washing-machine

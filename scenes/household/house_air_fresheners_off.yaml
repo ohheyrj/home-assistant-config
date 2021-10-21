@@ -1,0 +1,16 @@
+---
+name: House Air Fresheners Off
+entities:
+  switch.air_freshener:
+    friendly_name: Air Freshener
+    icon: mdi:air-filter
+    state: 'off'
+  switch.air_freshener_2:
+    friendly_name: Air Freshener
+    icon: mdi:air-filter
+    state: 'off'
+  switch.air_freshener_3:
+    friendly_name: Air freshener
+    icon: mdi:air-filter
+    state: 'off'
+icon: mdi:air-filter

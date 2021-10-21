@@ -1,0 +1,59 @@
+---
+title: Bedroom
+path: bedroom
+icon: 'mdi:bed'
+badges: []
+cards:
+  - type: custom:vertical-stack-in-card
+    title: Environment
+    cards:
+      - type: gauge
+        entity: sensor.bedroom_sensor_humidity
+        max: 100
+        min: 0
+        name: Humidity
+      - type: 'custom:mini-graph-card'
+        name: Temperature
+        entities:
+          - sensor.bedroom_sensor_temperature
+        line_color: green
+  - type: entities
+    entities:
+      - entity: switch.desk
+      - entity: switch.extension_bar
+      - entity: switch.air_freshener_3
+      - switch.wax_melter
+    title: Plugs
+  - type: 'custom:mini-graph-card'
+    entities:
+      - entity: sensor.bedroom_multi_sensor_2
+        color: lightblue
+    hours_to_show: 24
+    points_per_hour: 1
+    name: Bedroom Humidity
+  - type: entities
+    title: Lights
+    entities:
+      - entity: light.bed
+      - entity: light.bedroom_lamp
+      - entity: light.bedroom_ceiling_fixture
+      - entity: light.cabinet
+      - entity: light.bedroom_tv
+  - type: glance
+    entities:
+      - scene.bedroom_lights_dimmed
+      - scene.bedroom_lights_off
+      - scene.bedroom_lights_on
+      - scene.bedroom_reading
+      - scene.bedroom_romantic
+      - scene.bedroom_tv
+    columns: 3
+    show_name: true
+    show_state: false
+    state_color: false
+    title: Scenes
+  - type: entities
+    entities:
+      - media_player.bedroom_display
+      - media_player.bedroom_tv
+    title: Media Players

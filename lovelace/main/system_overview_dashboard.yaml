@@ -1,0 +1,4 @@
+---
+title: System Overview
+views:
+  - !include views/system_overview_dashboard/001-system_overview_dashboard_ha.yaml

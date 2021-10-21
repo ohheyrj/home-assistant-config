@@ -1,0 +1,13 @@
+---
+platform: command_line
+name: Supervisor Addon Updates
+command: 'curl http://supervisor/supervisor/info -H "Authorization: Bearer $(printenv SUPERVISOR_TOKEN)" | jq ''{"addons":[.data.addons[] | select(.update_available)]}'''
+value_template: >-
+  {% if value_json.addons|length > 0 %}
+    true
+  {% else %}
+    false
+  {% endif %}
+json_attributes:
+  - addons
+scan_interval: 3600

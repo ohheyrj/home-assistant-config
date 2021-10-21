@@ -1,0 +1,16 @@
+---
+name: Living Room Lights Off
+entities:
+  light.living_room_light:
+    brightness: 255
+    state: 'off'
+  light.living_room_wall_lights:
+    brightness: 255
+    state: 'off'
+  light.tv_lights:
+    state: 'off'
+    brightness: 255
+  light.standing_lamp:
+    state: 'off'
+    brightness: 255
+icon: mdi:lightbulb-off-outline

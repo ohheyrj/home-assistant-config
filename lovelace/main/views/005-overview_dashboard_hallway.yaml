@@ -1,0 +1,36 @@
+---
+title: Hallway
+path: hallway
+icon: 'mdi:door-open'
+badges: []
+cards:
+  - type: custom:vertical-stack-in-card
+    title: Environment
+    cards:
+      - type: gauge
+        entity: sensor.hallways_sensor_humidity
+        min: 0
+        max: 100
+        name: Humidity
+      - type: 'custom:mini-graph-card'
+        name: Temperature
+        entities:
+          - sensor.hallways_sensor_temperature
+        line_color: green
+  - type: entities
+    title: States
+    entities:
+      - binary_sensor.front_door_contact
+  - type: entities
+    entities:
+      - entity: light.hallway_light
+      - entity: light.hallway_lamp
+    title: Lights
+  - type: entities
+    title: Plugs
+    entities:
+      - entity: switch.air_freshener_2
+  - type: picture-glance
+    title: Hallway Camera
+    entities: []
+    camera_image: camera.hallway_hd

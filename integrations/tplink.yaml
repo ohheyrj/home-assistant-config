@@ -1,0 +1,12 @@
+# ---
+# tplink:
+#   discovery: false
+#   switch:
+#     - host: bedroom-air-freshener.iot.heisenberg.host  # Air Freshener
+#     - host: washing-machine.iot.heisenberg.host  # Washing Machine
+#     - host: dishwasher.iot.heisenberg.host  # Dishwasher
+#     - host: bedroom-extension-bar.iot.heisenberg.host  # Extension Bar
+#     - host: second-bedroom-extension-bar.iot.heisenberg.host  # Second Bedroom Extension Bar
+#     - host: drysoon.iot.heisenberg.host  # DrySoon
+#     - host: hallway-air-freshener.iot.heisenberg.host  # Air Freshener 2
+#     - host: livingroom-air-freshener.iot.heisenberg.host  # Air Freshener 3

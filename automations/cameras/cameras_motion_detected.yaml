@@ -1,0 +1,16 @@
+---
+alias: Cameras - Motion Detected
+
+trigger:
+  - entity_id:
+      - binary_sensor.hallway_motion
+      - binary_sensor.living_room_motion
+    platform: state
+    to: 'on'
+
+action:
+  - service: image_processing.scan
+    target:
+      entity_id:
+        - image_processing.rekognition_hallway_hd
+        - image_processing.rekognition_living_room_hd

@@ -1,0 +1,4 @@
+---
+name: twilio_calls
+platform: twilio_call
+from_number: !secret twilio_phone_number

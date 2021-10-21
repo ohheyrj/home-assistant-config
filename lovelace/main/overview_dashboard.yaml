@@ -1,0 +1,9 @@
+---
+title: Our Home
+views:
+  - !include views/001-overview_dashboard_home.yaml
+  - !include views/002-overview_dashboard_environment.yaml
+  - !include views/005-overview_dashboard_hallway.yaml
+  - !include views/004-overview_dashboard_living_room.yaml
+  - !include views/006-overview_dashboard_kitchen.yaml
+  - !include views/003-overview_dashboard_bedroom.yaml

@@ -1,0 +1,14 @@
+---
+platform: androidtv
+name: Bedroom TV
+host: bedroom-tv-chromecast.iot.heisenberg.host
+exclude_unnamed_apps: true
+apps:
+  air.ITVMobilePlayer: "ITV Hub"
+  bbc.iplayer.android: "BBC iPlayer"
+  com.android.tv.settings: "Google TV Settings"
+  com.channel5.my5: "My5"
+  com.discovery.discoplus: "Discovery+"
+  com.ted.android.tv: "TED"
+  tunein.player: "TuneIn Radio"
+  uk.co.bbc.sounds: "BBC Sounds"

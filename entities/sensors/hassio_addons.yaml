@@ -1,0 +1,11 @@
+---
+platform: rest
+name: Addons
+resource: 'https://home-assistant.heisenberg.host/api/hassio/supervisor/info'
+headers:
+  Authorization: !secret hassio_long_live_access_token
+json_attributes_path: "$.data"
+json_attributes:
+  - addons
+  - addons_repositories
+value_template: '{{ value_json.data.addons | count}}'

@@ -1,0 +1,8 @@
+---
+radio_station:
+  name: 'Select Radio Station'
+  options:
+    - 'Gaydio'
+    - 'Forth 1'
+  initial: Gaydio
+  icon: mdi:radio

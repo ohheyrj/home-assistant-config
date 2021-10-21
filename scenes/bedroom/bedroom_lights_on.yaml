@@ -1,0 +1,24 @@
+---
+name: Bedroom Lights On
+entities:
+  light.bedroom_ceiling_fixture:
+    brightness: 255
+    color_name: 'white'
+    state: 'on'
+  light.bedroom_tv:
+    brightness: 255
+    color_name: 'homeassistant'
+    state: 'on'
+  light.cabinet:
+    brightness: 255
+    color_name: 'homeassistant'
+    state: 'on'
+  light.bedroom_lamp:
+    color_name: 'white'
+    brightness: 255
+    state: 'on'
+  light.bed:
+    color_name: 'homeassistant'
+    brightness: 255
+    state: 'on'
+icon: mdi:lightbulb-on-outline

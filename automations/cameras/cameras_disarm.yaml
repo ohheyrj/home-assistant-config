@@ -1,0 +1,25 @@
+---
+alias: Cameras - Disarm
+
+trigger:
+  - entity_id: input_boolean.cameras_armed
+    platform: state
+    to: 'off'
+
+action:
+  - service: tapo_control.ptz
+    entity_id:
+      - camera.hallway_hd
+      - camera.hallway_sd
+      - camera.living_room_hd
+      - camera.hallway_sd
+    data:
+      preset: '1'
+  - service: tapo_control.set_privacy_mode
+    entity_id:
+      - camera.hallway_hd
+      - camera.hallway_sd
+      - camera.living_room_hd
+      - camera.living_room_sd
+    data:
+      privacy_mode: 'on'

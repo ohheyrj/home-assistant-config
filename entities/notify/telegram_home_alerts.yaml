@@ -1,0 +1,4 @@
+---
+platform: telegram
+name: !secret telegram_bot_name_home_alerts
+chat_id: !secret telegram_allowed_chat_id_home_alerts

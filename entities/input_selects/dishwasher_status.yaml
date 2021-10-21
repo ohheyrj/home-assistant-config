@@ -1,0 +1,11 @@
+---
+dishwasher_status:
+  name: Dishwasher Status
+  options:
+    - Idle
+    - Running
+    - Drying
+    - Loading
+    - Finished
+    - Standby
+  icon: mdi:dishwasher

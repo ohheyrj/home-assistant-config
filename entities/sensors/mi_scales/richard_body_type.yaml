@@ -1,0 +1,7 @@
+---
+platform: mqtt
+name: "Richard Body Type"
+state_topic: "miscale/Richard/body_type"
+value_template: "{{ value_json['body_type'] }}"
+json_attributes_topic: "miscale/Richard/body_type"
+icon: mdi:human

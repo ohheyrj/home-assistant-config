@@ -1,0 +1,12 @@
+---
+bedroom:
+  name: Bedroom
+  entities:
+    - light.bed
+    - light.cabinet
+    - light.bedroom_standing_lamp
+    - light.bedroom_lamp
+    - light.bedroom_light
+    - switch.desk
+    - switch.extension_bar
+    - switch.air_freshener

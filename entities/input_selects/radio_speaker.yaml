@@ -1,0 +1,8 @@
+---
+radio_speaker:
+  name: 'Select Speaker'
+  options:
+    - 'Bedroom display'
+    - 'Living room home'
+  initial: 'Bedroom display'
+  icon: mdi:speaker-wireless

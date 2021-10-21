@@ -1,0 +1,52 @@
+# Generic ignores
+*.log
+*.log.*
+*.db
+*.db-shm
+*.db-wal
+*.pyc
+._*
+__pycache__
+
+# Directory (contents) ignores
+.cloud
+.storage
+deps
+/tts
+/ssh
+/image
+
+# Specific file ignores
+.uuid
+plex.conf
+html5_push_registrations.conf
+known_devices.yaml
+secrets.yaml
+.ip_authenticated.yaml
+google_service_account.json
+ip_bans.yaml
+govee_learning.yaml
+Pipfile
+Pipfile.lock
+# ESPHome ignores
+esphome/secrets.yaml
+esphome/**/
+
+# www ignores
+www/*.jpeg
+www/*.jpg
+www/pics
+www/custom-lovelace/upcoming-media-card
+www/amazon-rekognition/*.png
+
+# Ignore files created by IDE's
+.vscode
+
+# HP Printer Ignore
+HP\ Printer-*.json
+HP\ Printer-*.xml
+
+# Tivo
+virgin_tivo.pickle
+
+# Specific keeps

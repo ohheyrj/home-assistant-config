@@ -1,0 +1,7 @@
+---
+platform: mqtt
+schema: json
+name: Living Room Wall Lights
+command_topic: "zigbee2mqtt/Living Room Wall Lights/set"
+state_topic: "zigbee2mqtt/Living Room Wall Lights"
+brightness: true

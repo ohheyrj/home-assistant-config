@@ -1,0 +1,6 @@
+---
+name: Mum & Dad
+latitude: !secret mum_dad_latitude
+longitude: !secret mum_dad_longitude
+radius: 45
+icon: mdi:home

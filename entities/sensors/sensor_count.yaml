@@ -1,0 +1,37 @@
+---
+platform: template
+sensors:
+  count_automations:
+    value_template: "{{ states.automation | list | length }}"
+  count_scripts:
+    value_template: "{{ states.script| list | length }}"
+
+  count_device_trackers:
+    value_template: "{{ states.device_tracker | list | length }}"
+
+  count_binary_sensors:
+    value_template: "{{ states.binary_sensor| list | length }}"
+
+  count_sensors:
+    value_template: "{{ states.sensor | list | length }}"
+
+  count_switches:
+    value_template: "{{ states.switch | list | length }}"
+
+  count_zones:
+    value_template: "{{ states.zone | list | length }}"
+
+  count_input_booleans:
+    value_template: "{{ states.input_boolean | list | length }}"
+
+  count_input_numbers:
+    value_template: "{{ states.input_number | list | length }}"
+
+  count_input_texts:
+    value_template: "{{ states.input_text | list | length }}"
+
+  count_input_selects:
+    value_template: "{{ states.input_select | list | length }}"
+
+  count_input_datetimes:
+    value_template: "{{ states.input_datetime | list | length }}"

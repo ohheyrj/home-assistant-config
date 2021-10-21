@@ -1,0 +1,10 @@
+---
+name: Hall Lamp Dimmed
+icon: mdi:lamp-outline
+entities:
+  light.hall_lamp:
+    brightness: 2
+    color_temp: 500
+    state: "on"
+  light.hallway_light:
+    state: "off"

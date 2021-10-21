@@ -1,0 +1,6 @@
+---
+name: Project Strength & Fitness
+latitude: !secret psf_latitude
+longitude: !secret psf_longitude
+radius: 45
+icon: mdi:dumbbell

@@ -1,0 +1,9 @@
+---
+alias: System - Generate readme
+
+trigger:
+  - platform: homeassistant
+    event: start
+
+action:
+  - service: readme.generate

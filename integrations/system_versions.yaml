@@ -1,0 +1,12 @@
+---
+sensor:
+  - platform: version
+    name: Current Hassio Version
+    source: local
+  - platform: version
+    name: Latest Hassio Version
+    source: hassio
+  - platform: version
+    name: Beta Hassio Version
+    source: hassio
+    beta: true

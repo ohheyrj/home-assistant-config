@@ -1,0 +1,44 @@
+---
+name: House Lights Off
+entities:
+  light.bedroom_ceiling_fixture:
+    brightness: 255
+    color_name: 'white'
+    state: 'off'
+  light.bedroom_tv:
+    brightness: 255
+    color_name: 'homeassistant'
+    state: 'off'
+  light.cabinet:
+    brightness: 255
+    color_name: 'homeassistant'
+    state: 'off'
+  light.bedroom_lamp:
+    color_name: 'white'
+    brightness: 255
+    state: 'off'
+  light.bed:
+    color_name: 'homeassistant'
+    brightness: 255
+    state: 'off'
+  light.hallway:
+    brightness: 255
+    state: 'off'
+  light.living_room_main_light:
+    brightness: 255
+    state: 'off'
+  light.tv_lights:
+    brightness: 255
+    state: 'off'
+  light.living_room_wall_lights:
+    brightness: 255
+    state: 'off'
+  light.hallway_light:
+    color_name: 'white'
+    brightness: 255
+    state: 'off'
+  light.kitchen_lights:
+    color_name: 'white'
+    brightness: 255
+    state: 'off'
+icon: mdi:lightbulb-off-outline

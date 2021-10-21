@@ -1,0 +1,9 @@
+---
+dishwasher_tablets:
+  name: Dishwasher Tablets
+  initial: 0
+  min: 0
+  max: 150
+  step: 1
+  mode: box
+  icon: mdi:dishwasher

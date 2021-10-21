@@ -1,0 +1,29 @@
+---
+alias: Notification - Door Open when Headphones On
+
+trigger:
+  - entity_id: binary_sensor.front_door_contact
+    platform: state
+    to: 'on'
+
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id:
+        - person.richard_annand
+      state: 'home'
+    - condition: state
+      entity_id:
+        - binary_sensor.richard_samsung_phone_music_active
+      state: 'on'
+    - condition: template
+      value_template: "{{ '38:18:4C:B4:EC:88' in state_attr('sensor.richard_samsung_phone_bluetooth_connection', 'connected_paired_devices') }}"
+
+action:
+  - service: notify.mobile_app_richard_samsung_phone
+    data:
+      message: 'Front door has opened'
+      data:
+        ttl: 0
+        priority: 'high'

@@ -1,0 +1,5 @@
+---
+nespresso_cycles:
+  name: Nespresso Cycle Count
+  icon: mdi:coffee-maker
+  step: 1

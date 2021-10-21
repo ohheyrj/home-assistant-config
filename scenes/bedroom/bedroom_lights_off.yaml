@@ -1,0 +1,14 @@
+---
+name: Bedroom Lights Off
+entities:
+  light.bedroom_ceiling_fixture:
+    state: 'off'
+  light.bedroom_tv:
+    state: 'off'
+  light.cabinet:
+    state: 'off'
+  light.bedroom_lamp:
+    state: 'off'
+  light.bed:
+    state: 'off'
+icon: mdi:lightbulb-off-outline

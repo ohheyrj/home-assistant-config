@@ -1,0 +1,4 @@
+---
+cameras_armed:
+  name: Cameras Armed
+  icon: mdi:cctv

@@ -1,0 +1,15 @@
+---
+name: Bedroom Movie
+entities:
+  light.cabinet:
+    state: 'off'
+  light.bedroom_ceiling_fixture:
+    state: 'off'
+  light.bed:
+    state: 'off'
+  light.bedroom_tv:
+    state: 'on'
+    color_name: 'red'
+    brightness: 125
+  light.bedroom_lamp:
+    state: 'off'

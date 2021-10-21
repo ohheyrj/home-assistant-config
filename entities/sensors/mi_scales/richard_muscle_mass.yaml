@@ -1,0 +1,8 @@
+---
+platform: mqtt
+name: "Richard Muscle Mass"
+state_topic: "miscale/Richard/muscle_mass"
+value_template: "{{ value_json['muscle_mass'] }}"
+json_attributes_topic: "miscale/Richard/muscle_mass"
+unit_of_measurement: "%"
+icon: mdi:arm-flex

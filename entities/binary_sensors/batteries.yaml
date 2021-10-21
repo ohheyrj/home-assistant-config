@@ -1,0 +1,26 @@
+---
+platform: template
+sensors:
+  low_batteries:
+    friendly_name: Low batteries
+    value_template: >-
+        {%- set data = namespace(entities=[]) -%}
+        {% for state in states if state.attributes.device_class == 'battery' and "SM-G988B" not in state.attributes.friendly_name %}
+        {% if state | int < 99 %}
+            {%- set data.entities = data.entities + [state.attributes.friendly_name] -%}
+        {% endif %}
+        {% endfor %}
+        {% if data.entities | length > 0 %}
+            on
+        {% else %}
+            off
+        {% endif %}
+    attribute_templates:
+      batteries: >-
+        {%- set data = namespace(entities=[]) -%}
+        {% for state in states if state.attributes.device_class == 'battery' and "SM-G988B" not in state.attributes.friendly_name and "iPad" not in state.attributes.friendly_name%}
+          {% if state | int < 10 %}
+            {%- set data.entities = data.entities + [state.attributes.friendly_name] -%}
+          {% endif %}
+        {% endfor %}
+        {{ data.entities | list }}

@@ -1,0 +1,28 @@
+---
+
+yaml-files:
+  - '*.yaml'
+  - '*.yml'
+  - '.yamllint'
+
+ignore: |
+  packages/system/system_updates.yaml
+  scripts/radio_play.yaml
+  entities/binary_sensors/batteries.yaml
+  packages/rest_commands/github.yaml
+  blueprints/
+  entities/sensors/supervisor/supervisor_addon_updates.yaml
+  entities/sensors/hassio/hassio_version.yaml
+  entities/sensors/supervisor/supervisor_versions.yaml
+  themes/
+  custom_components/
+  .github/
+  promtail/additional_pipeline_stages.yaml
+  home-assistant.log.1
+  home-assistant.log.fault
+
+extends: default
+
+rules:
+  line-length:
+    max: 180

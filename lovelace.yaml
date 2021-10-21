@@ -1,0 +1,24 @@
+---
+mode: storage
+dashboards:
+  overview-dashboard:
+    mode: yaml
+    filename: lovelace/main/overview_dashboard.yaml
+    title: Our Home
+    icon: mdi:home
+    show_in_sidebar: true
+    require_admin: false
+  system-overview-dashboard:
+    mode: yaml
+    filename: lovelace/main/system_overview_dashboard.yaml
+    title: System Overview
+    icon: mdi:server
+    show_in_sidebar: true
+    require_admin: true
+  room-scenes-dashboard:
+    mode: yaml
+    filename: lovelace/main/room_scenes.yaml
+    title: Room Scenes
+    icon: mdi:map-marker
+    show_in_sidebar: false
+    require_admin: false

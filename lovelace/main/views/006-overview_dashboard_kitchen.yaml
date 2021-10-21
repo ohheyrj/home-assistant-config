@@ -1,0 +1,54 @@
+---
+title: Kitchen
+path: kitchen
+icon: "mdi:fridge-outline"
+badges: []
+cards:
+  - type: custom:vertical-stack-in-card
+    title: Environment
+    cards:
+      - type: gauge
+        entity: sensor.kitchen_sensor_humidity
+        min: 0
+        max: 100
+        name: Humidity
+      - type: "custom:mini-graph-card"
+        name: Temperature
+        entities:
+          - sensor.kitchen_sensor_temperature
+        line_color: green
+  - type: custom:vertical-stack-in-card
+    title: Power Consumption
+    cards:
+      - type: custom:mini-graph-card
+        name: Washing Machine Consumption
+        entities:
+          - sensor.washing_machine_watts
+      - type: custom:mini-graph-card
+        name: Dishwasher Consumption
+        entities:
+          - sensor.dishwasher_watts
+  - type: entities
+    title: Lights
+    entities:
+      - light.kitchen_lights
+    name: Kitchen Lights
+  - type: entities
+    entities:
+      - entity: counter.dishwasher_cycles
+      - entity: counter.nespresso_cycles
+      - entity: counter.washing_machine_cycles
+    title: Cycle Counts
+  - type: entities
+    title: States
+    entities:
+      - binary_sensor.kitchen_door_contact
+      - input_select.dishwasher_status
+      - input_select.washing_machine_status
+      - input_boolean.nespresso_lid
+  - type: entities
+    title: Cleaning Status
+    entities:
+      - input_boolean.nespresso_cleaning
+      - input_boolean.washing_machine_cleaning
+      - input_boolean.dishwasher_cleaning

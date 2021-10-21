@@ -1,0 +1,14 @@
+---
+alias: Xbox - on xbox power on, turn on chromecast
+
+trigger:
+  - platform: state
+    entity_id:
+      - media_player.bedroom_xbox
+    to: 'on'
+    from: 'off'
+
+action:
+  - service: media_player.turn_on
+    target:
+      entity_id: media_player.bedroom_tv

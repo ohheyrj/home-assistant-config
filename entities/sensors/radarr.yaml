@@ -1,0 +1,13 @@
+# ---
+# platform: radarr
+# api_key: !secret radarr_api_key
+# host: radarr.heisenberg.host
+# monitored_conditions:
+#   - movies
+#   - upcoming
+#   - commands
+#   - diskspace
+#   - status
+# ssl: true
+# days: 7
+# port: 443

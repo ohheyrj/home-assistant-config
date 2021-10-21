@@ -1,0 +1,21 @@
+---
+alias: Medication Reminder - Medication Taken
+
+trigger:
+  - entity_id:
+      - input_boolean.medication_taken
+    platform: state
+    to: "on"
+
+action:
+  - service: input_number.decrement
+    target:
+      entity_id:
+        - input_number.prep_tablets
+  - service: input_number.decrement
+    target:
+      entity_id:
+        - input_number.sertraline_tablets
+  - service: notify.mobile_app_richard_samsung_phone
+    data:
+      message: "Medication marked as taken"

@@ -1,0 +1,16 @@
+---
+alias: Cameras - Object detected
+id: d17ee152-7bab-4860-b741-110ed9619a10
+
+trigger:
+  - platform: event
+    event_type: rekognition.object_detected
+
+action:
+  - service: notify.mobile_app_richard_samsung_phone
+    data:
+      message: "Person Detected At Home!"
+      data:
+        ttl: 0
+        priority: "high"
+        image: 'https://y95ihjcc7tt9ahuo95tsm899xhgabk6a.ui.nabu.casa{{ trigger.event.data.saved_file | replace("/config/www/", "/local/") }}'

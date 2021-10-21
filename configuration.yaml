@@ -1,0 +1,25 @@
+---
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+discovery:
+
+homeassistant:
+  packages: !include_dir_named integrations
+  allowlist_external_dirs:
+    - !secret allow_list_ext_dir
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.30.33.0/24
+
+scene: !include_dir_list scenes
+lovelace: !include lovelace.yaml

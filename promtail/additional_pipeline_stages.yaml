@@ -1,0 +1,5 @@
+- match:
+    selector: {job="systemd-journal", syslog_identifier="79ac1c3e6e86"}
+    stages:
+      - regex:
+        express: '(?P<date>\d{4}-\d{2}-\d{2}) (?P<time>\d{2}:\d{2}:\d{2}) (?P<log_level>\w*) \((?P<thread>\w*)\) \[(?P<component>.*)\] (?P<message>.*)'

@@ -1,0 +1,4 @@
+---
+spotify:
+  client_id: b20355e401c245349f5ad9c056b3392c
+  client_secret: !secret spotify_client_secret

@@ -1,0 +1,21 @@
+---
+name: Bedroom Reading
+entities:
+  light.cabinet:
+    brightness: 255
+    color_name: 'green'
+    state: 'on'
+  light.bedroom_lamp:
+    brightness: 120
+    color_name: 'white'
+    state: 'on'
+  light.bedroom_tv:
+    brightness: 255
+    color_name: 'green'
+    state: 'on'
+  light.bed:
+    color_name: 'green'
+    state: 'on'
+  light.bedroom_ceiling_fixture:
+    state: 'off'
+icon: mdi:book-open-variant

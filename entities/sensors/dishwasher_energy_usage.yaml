@@ -1,0 +1,23 @@
+---
+platform: template
+sensors:
+  dishwasher_amps:
+    friendly_name_template: "{{ state_attr('switch.dishwasher','friendly_name') }} Current"
+    value_template: "{{ state_attr('switch.dishwasher','current_a') | float }}"
+    unit_of_measurement: "A"
+  dishwasher_watts:
+    friendly_name_template: "{{ state_attr('switch.dishwasher','friendly_name') }} Current Consumption"
+    value_template: "{{ state_attr('switch.dishwasher','current_power_w') | float }}"
+    unit_of_measurement: "W"
+  dishwasher_total_kwh:
+    friendly_name_template: "{{ state_attr('switch.dishwasher','friendly_name') }} Total Consumption"
+    value_template: "{{ state_attr('switch.dishwasher','total_energy_kwh') | float }}"
+    unit_of_measurement: "kWh"
+  dishwasher_volts:
+    friendly_name_template: "{{ state_attr('switch.dishwasher','friendly_name') }} Voltage"
+    value_template: "{{ state_attr('switch.dishwasher','voltage') | float }}"
+    unit_of_measurement: "V"
+  dishwasher_today_kwh:
+    friendly_name_template: "{{ state_attr('switch.dishwasher','friendly_name') }} Today's Consumption"
+    value_template: "{{ state_attr('switch.dishwasher','today_energy_kwh') | float }}"
+    unit_of_measurement: "kWh"
