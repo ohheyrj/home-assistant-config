@@ -17,7 +17,7 @@ condition:
         state: "off"
       - alias: "Hallway Lamp Off"
         condition: state
-        entity_id: light.hallway_lamp
+        entity_id: light.hall_lamp
         state: "off"
 
 action:
