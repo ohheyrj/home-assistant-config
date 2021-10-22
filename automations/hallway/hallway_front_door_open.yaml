@@ -1,0 +1,50 @@
+---
+alias: Hallway - Front Door Open
+id: 0cd0084a-02ce-464d-b610-739e3a742bcb
+
+trigger:
+  - platform: state
+    entity_id: binary_sensor.front_door_contact
+    from: "off"
+    to: "on"
+
+condition:
+  - condition: and
+    conditions:
+      - alias: "Hallway Light Off"
+        condition: state
+        entity_id: light.hallway_light
+        state: "off"
+      - alias: "Hallway Lamp Off"
+        condition: state
+        entity_id: light.hallway_lamp
+        state: "off"
+
+action:
+  - alias: "Turn light/lamp on"
+    choose:
+    - conditions:
+        - alias: "Sun above"
+          condition: state
+          entity_id: sun.sun
+          state: "above_horizon"
+      sequence:
+        - alias: "Turn on Light"
+          service: scene.turn_on
+          target:
+            entity_id: scene.hall_lights_on
+    - conditions:
+        - alias: "Sun below"
+          condition: state
+          entity_id: sun.sun
+          state: "below_horizon"
+      sequence:
+        - alias: "Turn on Light"
+          service: scene.turn_on
+          target:
+            entity_id: scene.hall_lamp_on
+  - delay: 00:01
+  - alias: "Turn off light/lamp"
+    service: scene.turn_on
+    target:
+      entity_id: scene.hall_lights_off
