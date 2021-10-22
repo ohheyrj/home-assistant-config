@@ -3,4 +3,4 @@
   sensors:
     washing_machine_cleaning_required:
       friendly_name: "Washing Machine Cleaning Required"
-      value_template: {{states.counter.washing_machine_cycles.state | float > 20}}
+      value_template: "{{ states('counter.washing_machine_cycles') | float > 20 }}"
