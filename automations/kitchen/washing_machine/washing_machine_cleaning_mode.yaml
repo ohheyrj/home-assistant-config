@@ -1,0 +1,38 @@
+---
+alias: Kitchen - Washing Machine - Cleaning Mode Enable
+id: dd6d42f5-3530-4094-8619-32e14a67e8b0
+
+trigger:
+  - platform: event
+    event_type:
+      - tag_scanned
+
+condition:
+  - condition: template
+    value_template: "{{ trigger.event.data.tag_id == 'cb181a7f-2e64-433c-a319-c7d4b975475f'}}"
+
+action:
+- alias: "Enable Cleaning Mode"
+  choose:
+  - conditions:
+    - alias: "Set washing machine cleaning if not already"
+      condition: state
+      entity_id: input_boolean.washing_machine_cleaning
+      state: "off"
+    sequence:
+      - alias: "Set washing machine cleaning on"
+        service: input_boolean.turn_on
+        target:
+          entity_id: input_boolean.washing_machine_cleaning
+  - conditions:
+    - alias: "Send message if cleaning mode is already on"
+      condition: state
+      entity_id: input_boolean.washing_machine_cleaning
+      state: "on"
+    sequence:
+      - service: notify.mobile_app_richard_samsung_phone
+        data:
+          message: "Washing Machine is already in cleaning mode."
+          data:
+            ttl: 0
+            priority: "high"
