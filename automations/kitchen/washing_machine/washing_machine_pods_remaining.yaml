@@ -1,0 +1,14 @@
+---
+alias: Washing Machine - Pods Remaining
+id: 39a2d348-3abe-496e-971a-b4a434ffb0dc
+
+trigger:
+  - platform: numeric_state
+    entity_id: input_number.washing_machine_pods
+    below: 5
+
+action:
+  - service: notify.mobile_app_richard_samsung_phone
+    data:
+      message: >-
+        Only {{ states('input_number.washing_machine_pods') | round }} washing machine pods left
