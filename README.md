@@ -32,13 +32,13 @@ Person | Zone
 
 Binary Sensors | Sensors
 -- | --
-39 | 148
+40 | 138
 
 ### Other
 
 Alert | Automation | Group | Scene | Script
 -- | -- | -- | -- | --
-0 | 15 | 4 | 19 | 3
+1 | 34 | 4 | 20 | 4
 
 ## HACS
 
@@ -61,7 +61,7 @@ Hp Printers Integration | HP Printer Integration | 1.0.1 | https://github.com/el
 Node Red Companion | Companion Component for node-red-contrib-home-assistant-websocket to help integrate Node-RED with Home Assistant Core | v0.5.2 | https://github.com/zachowj/hass-node-red
 Spotcast | Home assistant custom component to start Spotify playback on an idle chromecast device as well as control spotify connect devices | v3.6.17 | https://github.com/fondberg/spotcast
 Tapo: Cameras Control | Control for Tapo cameras as a Home Assistant component | 3.4.1 | https://github.com/JurajNyiri/HomeAssistant-Tapo-Control
-Tuya V2 | Home Assistant custom integration for controlling Powered by Tuya (PBT) devices using Tuya Open API, officially maintained by the Tuya Developer Team. | v1.6.0 | https://github.com/tuya/tuya-home-assistant
+Tuya V2 | Home Assistant integration for controlling Powered by Tuya (PBT) devices using Tuya Open API, maintained by the Home Assistant Community and Tuya Developer Team. | v1.6.0 | https://github.com/tuya/tuya-home-assistant
 
 ### Lovelace
 Name | Description | Installed Version | Documentation
