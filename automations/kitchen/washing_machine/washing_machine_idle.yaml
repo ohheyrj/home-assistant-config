@@ -13,6 +13,6 @@ action:
   - alias: "Set washing machine status idle"
     service: input_select.select_option
     target:
-      entity_id: input_select.dishwasher_status
+      entity_id: input_select.washing_machine_status
     data:
       option: 'Idle'
