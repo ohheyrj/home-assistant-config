@@ -1,0 +1,16 @@
+---
+washing_machine_drysoon_notification:
+  alias: Washing Machine DrySoon Notification
+  icon: mdi:radiator
+  sequence:
+    - service: notify.mobile_app_richard_samsung_phone
+      data:
+        message: "Washing Machine is already in cleaning mode."
+        data:
+          ttl: 0
+          priority: "high"
+          actions:
+            - action: "drysoon_on_yes"
+              title: "Yes"
+            - action: "drysoon_on_remind"
+              title: "Remind me later"
