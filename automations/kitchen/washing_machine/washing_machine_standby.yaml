@@ -1,0 +1,17 @@
+---
+alias: Kitchen - Washing Machine - Standby
+id: 284289c4-c3dd-4c26-a760-93f2e099bc34
+
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.washing_machine_current
+    below: 0.02
+    for: "00:01"
+
+action:
+  - alias: "Set washing machine status standby"
+    service: input_select.select_option
+    target:
+      entity_id: input_select.dishwasher_status
+    data:
+      option: 'Standby'
