@@ -1,0 +1,37 @@
+---
+alias: Kitchen - Washing Machine - DrySoon
+id: 66dcefa0-7da5-4f22-8e2f-0d0f2a1a2d5a
+
+variables:
+  drysoon_responses:
+    - drysoon_on_yes
+    - drysoon_on_remind
+
+trigger:
+  - platform: event
+    event_type:
+      - mobile_app_notification_action
+
+condition:
+  - condition: template
+    value_template: "{{ trigger.event.data.action in drysoon_responses}}"
+
+action:
+  - choose:
+    - conditions:
+        - alias: "Yes Response"
+          condition: template
+          value_template: "{{ trigger.event.data.action == 'drysoon_on_yes' }}"
+      sequence:
+        - alias: "Turn on Drysoon"
+          service: switch.turn_on
+          target:
+            entity_id: switch.drysoon
+    - conditions:
+      - alias: "Remind Response"
+        condition: template
+        value_template: "{{ trigger.event.data.action == 'drysoon_on_remind' }}"
+      sequence:
+        - delay: 00:10
+        - alias: "Call Notification Script"
+          service: script.washing_machine_drysoon_notification
