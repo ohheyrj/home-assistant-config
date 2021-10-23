@@ -13,7 +13,7 @@ action:
     - alias: "Lid is closed"
       condition: state
       entity_id: sensor.nespresso_angle
-      state: 1
+      state: '1'
     sequence:
       - alias: "Set lid closed"
         service: input_boolean.turn_off
