@@ -1,6 +1,6 @@
 ---
 alias: Kitchen - Washing Machine - Running
-id: 9667fc93-b975-4516-87a3-1bed027792e1
+id: 818f8a02-d9ff-4ee7-a9b0-03a128936c8c
 
 trigger:
   - platform: numeric_state
