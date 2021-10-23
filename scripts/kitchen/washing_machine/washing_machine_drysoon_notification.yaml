@@ -5,7 +5,7 @@ washing_machine_drysoon_notification:
   sequence:
     - service: notify.mobile_app_richard_samsung_phone
       data:
-        message: "Washing Machine is already in cleaning mode."
+        message: "Washing machine finished, turn on DrySoon?"
         data:
           ttl: 0
           priority: "high"
