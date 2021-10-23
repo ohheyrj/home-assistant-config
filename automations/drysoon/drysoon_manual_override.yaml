@@ -1,0 +1,22 @@
+---
+alias: Drysoon - Manual Override
+id: 80024ef6-5cef-4397-81eb-a3e023c5a548
+
+trigger:
+  - platform: event
+    event_type:
+      - tag_scanned
+
+condition:
+  - condition: template
+    value_template: "{{ trigger.event.data.tag_id == 'bd579131-7e6f-42f1-a598-5bcd35a2ec83'}}"
+
+action:
+  - alias: "Turn on DrySoon"
+    service: switch.turn_on
+    target:
+      entity_id: switch.drysoon
+  - alias: "Set override"
+    service: input_boolean.turn_on
+    target:
+      entity_id: input_boolean.dry_soon_manual_override
