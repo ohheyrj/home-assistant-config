@@ -1,0 +1,18 @@
+---
+alias: Kitchen - Washing Machine - Idle
+id: 9667fc93-b975-4516-87a3-1bed027792e1
+
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.washing_machine_current
+    above: 0.01
+    below: 0.05
+    for: "00:01"
+
+action:
+  - alias: "Set washing machine status idle"
+    service: input_select.select_option
+    target:
+      entity_id: input_select.dishwasher_status
+    data:
+      option: 'Idle'

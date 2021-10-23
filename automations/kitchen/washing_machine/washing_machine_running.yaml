@@ -1,0 +1,17 @@
+---
+alias: Kitchen - Washing Machine - Running
+id: 9667fc93-b975-4516-87a3-1bed027792e1
+
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.washing_machine_current
+    above: 0.05
+    for: "00:05"
+
+action:
+  - alias: "Set washing machine status running"
+    service: input_select.select_option
+    target:
+      entity_id: input_select.dishwasher_status
+    data:
+      option: 'Running'
