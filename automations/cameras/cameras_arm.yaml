@@ -1,5 +1,6 @@
 ---
 alias: Cameras - Arm
+id: 678dd689-fb08-4869-8b5e-69c7d96f976e
 
 trigger:
   - entity_id: input_boolean.cameras_armed

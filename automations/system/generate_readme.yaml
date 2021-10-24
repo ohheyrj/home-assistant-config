@@ -1,5 +1,6 @@
 ---
 alias: System - Generate readme
+id: 62ad9c26-56c2-417b-b5ca-beae7b0fe7b8
 
 trigger:
   - platform: homeassistant

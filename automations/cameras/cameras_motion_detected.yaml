@@ -1,5 +1,6 @@
 ---
 alias: Cameras - Motion Detected
+id: 2649d8ec-bd82-4ff6-9ceb-f5a02aaf94d4
 
 trigger:
   - entity_id:

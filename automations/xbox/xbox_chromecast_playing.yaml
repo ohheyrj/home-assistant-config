@@ -1,5 +1,6 @@
 ---
 alias: Xbox - Chromecast Playing
+id: 12b141a8-a69d-40eb-a357-9c1f60dc95ad
 
 trigger:
   - platform: state

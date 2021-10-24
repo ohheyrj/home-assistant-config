@@ -1,5 +1,6 @@
 ---
 alias: Xbox - Event - Lights Dimmed
+id: 24db3f04-5841-4f9b-9803-772b5d40554e
 
 trigger:
   - platform: event

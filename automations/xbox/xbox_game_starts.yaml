@@ -1,5 +1,6 @@
 ---
 alias: Xbox - Game Starts
+id: 9125a5c4-5c68-419b-93c6-c8d895a0fd01
 
 trigger:
   - platform: state

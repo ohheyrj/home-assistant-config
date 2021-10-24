@@ -1,5 +1,6 @@
 ---
 alias: Medication Reminder - Medication Taken
+id: 9ec77314-81ce-43eb-a9b1-16d55b7965fc
 
 trigger:
   - entity_id:
