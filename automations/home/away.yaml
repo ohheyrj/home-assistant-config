@@ -1,0 +1,29 @@
+---
+alias: Home - Away
+id: 72f2327c-52ec-4b2e-b791-a7b543d36565
+
+trigger:
+  - platform: state
+    entity_id: group.all_people
+    from: "home"
+    to: "not_home"
+
+action:
+  - alias: "Turn cameras on"
+    service: input_boolean.turn_on
+    target:
+      entity_id: input_boolean.cameras_armed
+  - alias: "Turn away mode on"
+    service: input_boolean.turn_on
+    target:
+      entity_id: input_boolean.home_empty
+  - alias: "Turn off all lights"
+    service: light.turn_off
+    target:
+      entity_id: all
+  - service: notify.mobile_app_richard_samsung_phone
+    data:
+      message: "Goodbye! Lights are now off, cameas are on."
+      data:
+        ttl: 0
+        priority: "high"
