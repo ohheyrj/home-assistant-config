@@ -1,0 +1,23 @@
+---
+alias: Kitchen - Dishwasher - Standby
+id: c8fb1f76-4261-45fd-a903-ebdc3eecfce1
+
+trigger:
+  - platform: state
+    entity_id: sensor.dishwasher_current
+    to: '0.02'
+    for: "00:01:00"
+
+condition:
+  - alias: "Door is closed"
+    condition: state
+    entity_id: binary_sensor.dishwasher_door_contact
+    state: "off"
+
+action:
+  - alias: "Set dishwasher loading"
+    service: input_select.select_option
+    target:
+      entity_id: input_select.dishwasher_status
+    data:
+      option: 'Standby'

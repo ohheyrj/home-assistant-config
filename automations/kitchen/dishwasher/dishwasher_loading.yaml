@@ -1,0 +1,17 @@
+---
+alias: Kitchen - Dishwasher - Loading
+id: 9e42ab07-2ab0-4c4a-81f4-36e0cd652f33
+
+trigger:
+  - platform: state
+    entity_id: binary_sensor.dishwasher_door_contact
+    to: "on"
+    for: "00:05:00"
+
+action:
+- alias: "Set dishwasher loading"
+  service: input_select.select_option
+  target:
+    entity_id: input_select.dishwasher_status
+  data:
+    option: 'Loading'
