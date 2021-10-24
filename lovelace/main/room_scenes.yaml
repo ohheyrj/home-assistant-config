@@ -1,4 +1,0 @@
----
-title: Room Scenes
-views:
-  - !include views/room_scenes/001-bedroom.yaml
