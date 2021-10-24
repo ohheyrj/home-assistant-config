@@ -2,5 +2,5 @@
 all_people:
   name: All People
   entities:
-    - person.test
-    - person.test2
+    - person.richard
+    - person.ryan
