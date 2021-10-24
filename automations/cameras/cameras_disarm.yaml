@@ -1,5 +1,6 @@
 ---
 alias: Cameras - Disarm
+id: f39d7b9d-582f-4f67-93df-7f5eb7cf775b
 
 trigger:
   - entity_id: input_boolean.cameras_armed

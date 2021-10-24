@@ -1,5 +1,6 @@
 ---
 alias: Xbox - Event - Lights On
+id: 6770acbb-4d4f-496c-8cf1-1060406fb0c2
 
 trigger:
   - platform: event

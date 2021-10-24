@@ -1,5 +1,6 @@
 ---
 alias: Xbox - Game Stop
+id: d8614d3e-39ae-4205-b3a4-44ea35868d27
 
 trigger:
   - platform: state

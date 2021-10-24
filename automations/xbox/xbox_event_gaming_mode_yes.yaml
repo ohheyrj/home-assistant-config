@@ -1,5 +1,6 @@
 ---
 alias: Xbox - Event - Gaming mode yes
+id: 6160fb9e-d74e-4ed8-b74e-a8df534f4b62
 
 trigger:
   - platform: event

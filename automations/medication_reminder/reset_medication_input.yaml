@@ -1,5 +1,6 @@
 ---
 alias: Medication Reminder - Reset Medication Input
+id: 55b8dfcb-05eb-4a41-a10b-8cf44365a72f
 
 trigger:
   - platform: time

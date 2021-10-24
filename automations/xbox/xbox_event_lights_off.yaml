@@ -1,5 +1,6 @@
 ---
 alias: Xbox - Event - Lights Off
+id: 937993f6-4d02-4ccc-a812-95a214f6fffe
 
 trigger:
   - platform: event

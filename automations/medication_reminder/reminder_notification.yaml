@@ -1,5 +1,6 @@
 ---
 alias: Medication Reminder - Reminder Notification
+id: b663961f-b1cf-409a-af44-0b4cb86a4c7e
 
 trigger:
   - platform: time_pattern

@@ -1,5 +1,6 @@
 ---
 alias: Xbox - on xbox power on, turn on chromecast
+id: 0ff0d57c-d9b9-4c16-a25a-d4f5fde27ddb
 
 trigger:
   - platform: state

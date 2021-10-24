@@ -1,5 +1,6 @@
 ---
 alias: Medication Reminder - Trigger Medication Taken
+id: 7c9c1940-5770-48bd-8393-233710281685
 
 variables:
   tags: a410bed4-013f-4d43-9596-f225844aeedf

@@ -1,5 +1,6 @@
 ---
 alias: Notification - Door Open when Headphones On
+id: 4e82a8ee-113d-4caa-ba9f-c92bfb485a28
 
 trigger:
   - entity_id: binary_sensor.front_door_contact
