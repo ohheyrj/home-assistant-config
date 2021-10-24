@@ -1,0 +1,23 @@
+---
+alias: Kitchen - Dishwasher - Idle
+id: 443ea9a0-6b32-4fcb-970a-c59d06ca865b
+
+trigger:
+  - platform: state
+    entity_id: sensor.dishwasher_current
+    to: '0.03'
+    for: "00:05:00"
+
+condition:
+  - alias: "Door is closed"
+    condition: state
+    entity_id: binary_sensor.dishwasher_door_contact
+    state: "off"
+
+action:
+  - alias: "Set dishwasher loading"
+    service: input_select.select_option
+    target:
+      entity_id: input_select.dishwasher_status
+    data:
+      option: 'Idle'

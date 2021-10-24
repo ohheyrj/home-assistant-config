@@ -1,0 +1,23 @@
+---
+alias: Kitchen - Dishwasher - Status
+id: b9d3a3ad-f4a6-4816-8aed-33ab0fb981b5
+
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.dishwasher_current
+    above: 0.03
+    for: "00:05:00"
+
+condition:
+  - alias: "Door is closed"
+    condition: state
+    entity_id: binary_sensor.dishwasher_door_contact
+    state: "off"
+
+action:
+  - alias: "Set dishwasher loading"
+    service: input_select.select_option
+    target:
+      entity_id: input_select.dishwasher_status
+    data:
+      option: 'Running'

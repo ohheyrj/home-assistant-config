@@ -1,0 +1,45 @@
+---
+alias: Kitchen - Dishwasher - Running Actions
+id: 5876cf66-7c79-46fd-8380-1210b04f2f6c
+
+trigger:
+  - platform: state
+    entity_id: input_select.dishwasher_status
+    from: "Loading"
+    to: "Running"
+
+action:
+  - alias: "Actions when dishwasher is running"
+    choose:
+    - conditions:
+        - alias: "Cleaning mode is on"
+          condition: state
+          entity_id: input_boolean.dishwasher_cleaning
+          state: "on"
+      sequence:
+        - alias: "Send notification"
+          service: notify.mobile_app_richard_samsung_phone
+          data:
+            message: 'Dishwasher is running a cleaning cycle'
+            data:
+              ttl: 0
+              priority: 'high'
+    - conditions:
+        - alias: "Cleaning mode is off"
+          condition: state
+          entity_id: input_boolean.dishwasher_cleaning
+          state: "off"
+      sequence:
+        - delay: "00:20"
+        - alias: "Still running?"
+          condition: state
+          entity_id: input_select.dishwasher_status
+          state: "Running"
+        - alias: "Decrease tablets"
+          service: input_number.decrement
+          target:
+            entity_id: input_number.dishwasher_tablets
+        - alias: "Increase cycle"
+          service: counter.increment
+          target:
+            entity_id: counter.dishwasher_cycles
