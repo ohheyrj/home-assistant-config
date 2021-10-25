@@ -8,6 +8,12 @@ trigger:
     from: "on"
     to: "off"
 
+condition:
+- alias: "Gaming mode has to be on"
+  condition: state
+  entity_id: input_boolean.xbox_gaming_mode
+  state: "on"
+
 action:
 - alias: "Send Message to Phone"
   service: notify.mobile_app_richard_samsung_phone
