@@ -1,0 +1,17 @@
+---
+alias: Kitchen - Kitchen Lights Off
+id: c4e3ce0b-a437-4b4f-bb3a-db79d86230f7
+
+trigger:
+  - platform: state
+    entity_id: binary_sensor.kitchen_pir_occupancy
+    from: "on"
+    to: "off"
+    for:
+      minutes: 10
+
+action:
+  - alias: "Turn off Lights"
+    service: light.turn_off
+    target:
+      entity_id: light.kitchen_lights
