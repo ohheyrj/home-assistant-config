@@ -1,0 +1,59 @@
+---
+alias: Xbox - Event - Lights
+id: 28680ea3-120f-47f8-a1aa-57a3b5fd3d81
+
+trigger:
+  - platform: event
+    event_type:
+      - mobile_app_notification_action
+
+variables:
+  xbox_events:
+    - xbox_lights_on
+    - xbox_lights_off
+    - xbox_lights_dimmed
+    - xbox_gaming_mode_yes
+
+condition:
+  - condition: template
+    value_template: "{{ trigger.event.data.action in xbox_events }}"
+
+action:
+- alias: "What lights to enable"
+  choose:
+  - conditions:
+      - condition: template
+        value_template: "{{ trigger.event.data.action == 'xbox_lights_on' }}"
+    sequence:
+      - alias: "Turn on lights"
+        service: scene.turn_on
+        target:
+          entity_id: scene.bedroom_lights_on
+  - conditions:
+      - condition: template
+        value_template: "{{ trigger.event.data.action == 'xbox_lights_off' }}"
+    sequence:
+      - alias: "Turn of lights"
+        service: scene.turn_on
+        target:
+          entity_id: scene.bedroom_lights_off
+  - conditions:
+      - condition: template
+        value_template: "{{ trigger.event.data.action == 'xbox_lights_dimmed' }}"
+    sequence:
+      - alias: "Dim lights"
+        service: scene.turn_on
+        target:
+          entity_id: scene.bedroom_lights_dimmed
+  - conditions:
+      - condition: template
+        value_template: "{{ trigger.event.data.action == 'xbox_gaming_mode_yes' }}"
+    sequence:
+      - alias: "Xbox lights"
+        service: scene.turn_on
+        target:
+          entity_id: scene.bedroom_xbox
+      - alias: "Toggle gaming mode"
+        service: input_boolean.turn_on
+        target:
+          entity_id: input_boolean.xbox_gaming_mode
