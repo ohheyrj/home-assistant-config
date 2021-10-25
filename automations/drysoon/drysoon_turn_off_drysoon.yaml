@@ -5,27 +5,28 @@ id: c7b57b44-c73d-4940-a579-0b00133b90ca
 trigger:
   - platform: numeric_state
     entity_id: sensor.dry_soon_sensor_humidity
-    below: 30
-    for: "00:30:00"
+    below: 40.00
+    for:
+      minutes: 60
 
 action:
   - alias: "Check if override is on/off"
     choose:
       - conditions:
-        - alias: "Override Off"
-          condition: state
-          entity_id: input_boolean.dry_soon_manual_override
-          state: "off"
+          - alias: "Override Off"
+            condition: state
+            entity_id: input_boolean.dry_soon_manual_override
+            state: "off"
         sequence:
           - alias: "Turn off DrySoon"
             service: switch.turn_off
             target:
               entity_id: switch.drysoon
       - conditions:
-        - alias: "Override On"
-          condition: state
-          entity_id: input_boolean.dry_soon_manual_override
-          state: "on"
+          - alias: "Override On"
+            condition: state
+            entity_id: input_boolean.dry_soon_manual_override
+            state: "on"
         sequence:
           - delay: "01:00:00"
           - alias: "Set override"
@@ -39,7 +40,7 @@ action:
   - alias: "Send notification"
     service: notify.mobile_app_richard_samsung_phone
     data:
-      message: 'Drysoon has reached limit, turning off.'
+      message: "Drysoon has reached limit, turning off."
       data:
         ttl: 0
-        priority: 'high'
+        priority: "high"
