@@ -15,17 +15,21 @@ condition:
   state: "on"
 
 action:
-- alias: "Send Message to Phone"
-  service: notify.mobile_app_richard_samsung_phone
-  data:
-    message: 'Xbox game finished, set lights?'
+  - alias: "Toggle gaming mode"
+    service: input_boolean.turn_off
+    target:
+      entity_id: input_boolean.xbox_gaming_mode
+  - alias: "Send Message to Phone"
+    service: notify.mobile_app_richard_samsung_phone
     data:
-      ttl: 0
-      priority: 'high'
-      actions:
-        - action: 'xbox_lights_dimmed'
-          title: 'Dimmed'
-        - action: 'xbox_lights_on'
-          title: 'On'
-        - action: 'xbox_lights_off'
-          title: 'Off'
+      message: 'Xbox game finished, set lights?'
+      data:
+        ttl: 0
+        priority: 'high'
+        actions:
+          - action: 'xbox_lights_dimmed'
+            title: 'Dimmed'
+          - action: 'xbox_lights_on'
+            title: 'On'
+          - action: 'xbox_lights_off'
+            title: 'Off'
