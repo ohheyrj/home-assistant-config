@@ -62,7 +62,7 @@ Name | Description | Installed Version | Documentation
 
 ### Addon Repositories
 {% for repository in states.sensor.addons.attributes.addons_repositories | sort -%}
-- {{ repository }}
+  - {{ repository }}
 {% endfor %}
 
 ***

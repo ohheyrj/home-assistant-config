@@ -6,7 +6,7 @@
 {{ range .Unreleased.CommitGroups -}}
 ### {{ .Title }}
 {{ range .Commits -}}
-- {{ if .Scope }}**{{ .Scope }}:** {{ end }}{{ .Subject }}
+{{ indent "- " 2 }}{{ if .Scope }}**{{ .Scope }}:** {{ end }}{{ .Subject }}
 {{ end }}
 {{ end -}}
 {{ end -}}
@@ -18,21 +18,21 @@
 {{ range .CommitGroups -}}
 ### {{ .Title }}
 {{ range .Commits -}}
-- {{ if .Scope }}**{{ .Scope }}:** {{ end }}{{ .Subject }}
+{{ indent "- " 2 }}{{ if .Scope }}**{{ .Scope }}:** {{ end }}{{ .Subject }}
 {{ end }}
 {{ end -}}
 
 {{- if .RevertCommits -}}
 ### Reverts
 {{ range .RevertCommits -}}
-- {{ .Revert.Header }}
+{{ indent "- " 2 }}{{ .Revert.Header }}
 {{ end }}
 {{ end -}}
 
 {{- if .MergeCommits -}}
 ### Pull Requests
 {{ range .MergeCommits -}}
-- {{ .Header }}
+{{ indent "- " 2 }}{{ .Header }}
 {{ end }}
 {{ end -}}
 
