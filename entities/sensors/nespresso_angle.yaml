@@ -1,6 +1,0 @@
----
-platform: template
-sensors:
-  nespresso_angle:
-    friendly_name: "Nespresso Angle"
-    value_template: "{{ state_attr('sensor.nespresso_action', 'angle_y') | int }}"
