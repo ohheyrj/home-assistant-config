@@ -4,7 +4,7 @@ id: 37cf3834-a157-4499-8316-a3bbf8421f22
 
 trigger:
   - platform: state
-    entity_id: input_boolean.nespresso_lid
+    entity_id: binary_sensor.nespresso_lid_contact
     from: "on"
     to: "off"
 
@@ -15,12 +15,11 @@ condition:
     state: "off"
 
 action:
-  - alias: "Wait for vibration"
-    wait_template: "{{ is_state('sensor.nespresso_action', 'vibration') }}"
-    timeout: "00:05"
   - alias: "Wait for lid to open"
-    wait_template: "{{ is_state('input_boolean.nespresso_lid', 'on') }}"
-    timeout: "00:05"
+    wait_template: "{{ is_state('binary_sensor.nespresso_lid_contact', 'on') }}"
+    timeout:
+      minutes: 5
+    continue_on_timeout: false
   - alias: "Increase nespresso cycle"
     service: counter.increment
     target:
