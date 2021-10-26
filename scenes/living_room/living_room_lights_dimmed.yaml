@@ -1,5 +1,5 @@
 ---
-name: Living Room Lights On
+name: Living Room Lights Dimmed
 entities:
   light.living_room_light:
     state: 'off'
