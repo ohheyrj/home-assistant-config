@@ -1,0 +1,7 @@
+---
+tvs:
+  name: TVs
+  entities:
+    - media_player.living_room_tv
+    - media_player.bedroom_xbox
+    - media_player.second_bedroom_tv

@@ -1,0 +1,5 @@
+---
+second_bedroom_lights:
+  name: Second Bedroom Lights
+  entities:
+    - light.second_bedroom_light

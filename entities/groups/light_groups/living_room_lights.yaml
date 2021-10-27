@@ -1,0 +1,8 @@
+---
+living_room_lights:
+  name: Living Room Lights
+  entities:
+    - light.living_room_light
+    - light.living_room_wall_lights
+    - light.tv_lights
+    - light.standing_lamp
