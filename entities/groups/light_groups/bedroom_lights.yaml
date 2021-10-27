@@ -1,0 +1,9 @@
+---
+bedroom_lights:
+  name: Bedroom Lights
+  entities:
+    - light.bed
+    - light.bedroom_ceiling_fixture
+    - light.bedroom_lamp
+    - light.bedroom_tv
+    - light.cabinet
