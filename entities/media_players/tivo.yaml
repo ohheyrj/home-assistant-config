@@ -1,13 +1,9 @@
 ---
 platform: virgintivo
-# default_is_show: false
-# show_packages: Free-to-air,Player,Full House  #Mix,Fun,Full House,Premium,Pay-per-view
-# force_hd: false
-# keep_connected: false
+
 tivos:
   1:
     name: Virgin
     host: 10.1.2.59
-    # force_hd: false
 tvchannellists:
   enable: true

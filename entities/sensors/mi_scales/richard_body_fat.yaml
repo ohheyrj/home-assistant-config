@@ -1,8 +1,0 @@
----
-platform: mqtt
-name: "Richard Body Fat"
-state_topic: "miscale/Richard/body_fat"
-value_template: "{{ value_json['body_fat'] }}"
-json_attributes_topic: "miscale/Richard/body_fat"
-unit_of_measurement: "%"
-icon: mdi:human-pregnant
