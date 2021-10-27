@@ -43,6 +43,8 @@ action:
           service: scene.turn_on
           target:
             entity_id: scene.hall_lamp_on
+  - alias: "Wait for door to close"
+    wait_template: "{{ is_state('binary_sensor.front_door_contact', 'off') }}"
   - delay: 00:05
   - alias: "Turn off light/lamp"
     service: scene.turn_on
