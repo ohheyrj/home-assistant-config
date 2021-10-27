@@ -1,8 +1,0 @@
----
-platform: mqtt
-name: "Richard BMI"
-state_topic: "miscale/Richard/bmi"
-value_template: "{{ value_json['bmi'] }}"
-unit_of_measurement: "kg/m2"
-json_attributes_topic: "miscale/Richard/bmi"
-icon: mdi:human

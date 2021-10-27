@@ -1,4 +1,0 @@
-# ---
-# platform: seventeentrack
-# username: !secret email_address
-# password: !secret seventeentrack_password
