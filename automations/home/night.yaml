@@ -32,4 +32,4 @@ action:
     target:
       entity_id:
         - group.living_room_lights
-        - group.hallway_lights
+        - group.hall_lights
