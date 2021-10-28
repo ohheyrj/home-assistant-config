@@ -1,0 +1,7 @@
+---
+camera_hall_unavailable:
+  name: Camera - Hall Unavailable
+  entity_id: camera.hallway_hd
+  repeat: 60
+  notifiers:
+    - mobile_app_richard_samsung_phone
