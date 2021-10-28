@@ -23,10 +23,16 @@ condition:
           condition: state
           entity_id: group.second_bedroom_lights
           state: "off"
-    - alias: "All TVs off"
-      condition: state
-      entity_id: media_player.living_room_tv
-      state: "off"
+    - condition: or
+      conditions:
+        - alias: "Living room TV off"
+          condition: state
+          entity_id: media_player.living_room_tv
+          state: "off"
+        - alias: "Living room TV unavailable"
+          condition: state
+          entity_id: media_player.living_room_tv
+          state: "unavailable"
 
 action:
   - alias: "Turn off Hall Lights"
