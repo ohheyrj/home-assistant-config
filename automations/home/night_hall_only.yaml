@@ -25,7 +25,7 @@ condition:
           state: "off"
     - alias: "All TVs off"
       condition: state
-      entity_id: group.tvs
+      entity_id: media_player.living_room_tv
       state: "off"
 
 action:
