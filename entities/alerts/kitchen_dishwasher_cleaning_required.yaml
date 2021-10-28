@@ -1,0 +1,8 @@
+---
+kitchen_dishwasher_cleaning_required:
+  name: Dishwasher Cleaning Required
+  entity_id: binary_sensor.dishwasher_cleaning_required
+  repeat: 1440
+  can_acknowledge: true
+  notifiers:
+    - mobile_app_richard_samsung_phone
