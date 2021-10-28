@@ -1,0 +1,7 @@
+---
+camera_living_room_unavailable:
+  name: Camera - Living Room Unavailable
+  entity_id: camera.living_room_hd
+  repeat: 60
+  notifiers:
+    - mobile_app_richard_samsung_phone
