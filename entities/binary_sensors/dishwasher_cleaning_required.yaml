@@ -1,0 +1,6 @@
+---
+platform: template
+sensors:
+  dishwasher_cleaning_required:
+    friendly_name: "Dishwasher Cleaning Required"
+    value_template: "{{ states('counter.dishwasher_cycles') | float > 20 }}"

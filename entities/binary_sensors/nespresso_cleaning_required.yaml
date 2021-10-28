@@ -1,0 +1,6 @@
+---
+platform: template
+sensors:
+  nespresso_cleaning_required:
+    friendly_name: "Nespresso Cleaning Required"
+    value_template: "{{ states('counter.nespresso_cycles') | float > 40 }}"
