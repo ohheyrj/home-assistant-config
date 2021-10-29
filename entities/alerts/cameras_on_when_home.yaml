@@ -1,0 +1,8 @@
+---
+cameras_on_when_home:
+  name: Camera - On When Home
+  entity_id: camera.hallway_hd
+  repeat: 1
+  skip_first: true
+  notifiers:
+    - mobile_app_richard_samsung_phone
