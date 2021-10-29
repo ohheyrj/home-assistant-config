@@ -1,0 +1,4 @@
+---
+cameras_on_when_home:
+  name: Cameras On When Home
+  icon: mdi:home-alert-outline
