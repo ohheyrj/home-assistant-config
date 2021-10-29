@@ -1,0 +1,24 @@
+---
+alias: Cameras - On When Home
+id: dc7c72db-de58-4dec-86d0-43bfd7eeb23f
+
+trigger:
+  - platform: state
+    entity_id: group.all_people
+    to: "home"
+
+condition:
+  - condition: or
+    conditions:
+      - alias: "Camera privacy mode off living room"
+        condition: template
+        value_template: "{{ is_state_attr('camera.living_room_hd', 'privacy_mode', 'off') }}"
+      - alias: "Camera privacy mode off hall"
+        condition: template
+        value_template: "{{ is_state_attr('camera.hallway_hd', 'privacy_mode', 'off') }}"
+
+action:
+  - alias: "Turn on cameras on when home boolean"
+    service: input_boolean.turn_on
+    target:
+      entity_id: input_boolean.cameras_on_when_home
