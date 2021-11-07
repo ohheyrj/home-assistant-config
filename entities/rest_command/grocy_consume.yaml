@@ -1,0 +1,10 @@
+---
+grocy_consume:
+  url: https://grocy.heisenberg.host/api/stock/products/{{productId}}/cosume
+  method: POST
+  headers:
+    GROCY-API-KEY: !secret grocy_api_key
+    Accept: application/json
+    Content-Type: application/json
+    cache-control: no-cache
+  payload: '{ \"amount\": {{amount}},  \"transaction_type\": \"consume\",  \"spoiled\": false }'
