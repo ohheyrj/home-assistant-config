@@ -1,0 +1,29 @@
+---
+alias: Medication Reminder Night - Reminder Notification
+id: 835dccdb-e6aa-47ee-8a14-71e634598bd0
+
+trigger:
+  - platform: time_pattern
+    hours: "/1"
+    minutes: 0
+
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: input_boolean.medication_taken_night
+      state: "off"
+    - condition: time
+      after: '21:00:00'
+      before: '04:00:00'
+
+action:
+  - service: notify.mobile_app_richard_samsung_phone
+    data:
+      message: "Reminder, take your nighttime medication"
+      data:
+        ttl: 0
+        priority: "high"
+        actions:
+          - action: "richard_medication_taken_night"
+            title: "I've taken it."

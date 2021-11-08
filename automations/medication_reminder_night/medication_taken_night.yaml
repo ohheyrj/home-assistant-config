@@ -1,0 +1,19 @@
+---
+alias: Medication Reminder Night - Medication Taken
+id: 7bb6b3c7-633c-4da9-b2c1-b9f2c6464e53
+
+trigger:
+  - entity_id:
+      - input_boolean.medication_taken_night
+    platform: state
+    to: "on"
+
+action:
+  - alias: 'Decrease Spray'
+    service: rest_command.grocy_consume
+    data:
+      productId: 63
+      amount: 4
+  - service: notify.mobile_app_richard_samsung_phone
+    data:
+      message: "Nightime medication marked as taken"

@@ -1,0 +1,4 @@
+---
+medication_taken_night:
+  name: Night Medication Taken
+  icon: mdi:weather-night

@@ -1,0 +1,17 @@
+---
+alias: Medication Reminder Night - Trigger Medication Taken
+id: 10ca5812-e9e6-4651-a04d-00a72c70bdc1
+
+trigger:
+  - platform: event
+    event_type:
+      - mobile_app_notification_action
+
+condition:
+  - condition: template
+    value_template: "{{ trigger.event.data.action == 'richard_medication_taken_night' }}"
+
+action:
+  - service: input_boolean.turn_on
+    target:
+      entity_id: input_boolean.medication_taken_night
