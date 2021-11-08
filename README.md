@@ -14,13 +14,13 @@ Below is a break down of the different types of entities that are currently depl
 
 Camera | Device Tracker | Light | Media Player | Switch
 -- | -- | -- | -- | --
-4 | 29 | 22 | 12 | 13
+4 | 31 | 21 | 15 | 12
 
 ### Inputs
 
 Boolean | Datetime | Number | Select | Text
 -- | -- | -- | -- | --
-11 | 0 | 5 | 5 | 0
+14 | 0 | 5 | 5 | 0
 
 ### People & Places
 
@@ -32,13 +32,13 @@ Person | Zone
 
 Binary Sensors | Sensors
 -- | --
-40 | 138
+43 | 134
 
 ### Other
 
 Alert | Automation | Group | Scene | Script
 -- | -- | -- | -- | --
-1 | 34 | 4 | 20 | 4
+6 | 51 | 10 | 19 | 3
 
 ## HACS
 
@@ -67,6 +67,7 @@ Tuya V2 | Home Assistant integration for controlling Powered by Tuya (PBT) devic
 Name | Description | Installed Version | Documentation
  --- | ----------- | ----------------- | -------------
 Auto Entities | 🔹Automatically populate the entities-list of lovelace cards | 1.9.1 | https://github.com/thomasloven/lovelace-auto-entities
+Battery State Card / Entity Row | Battery state card for Home Assistant | v1.6.4 | https://github.com/maxwroc/battery-state-card
 Button Card | ❇️ Lovelace button-card for home assistant | v3.4.2 | https://github.com/custom-cards/button-card
 Github Card | Track your repo issues, starts, forks, and pull requests | 1.4.1 | https://github.com/ljmerza/github-card
 Layout Card | 🔹 Get more control over the placement of lovelace cards. | 2.3.1 | https://github.com/thomasloven/lovelace-layout-card
