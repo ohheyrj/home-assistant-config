@@ -9,14 +9,21 @@ trigger:
     to: "on"
 
 action:
-  - service: input_number.decrement
-    target:
-      entity_id:
-        - input_number.prep_tablets
-  - service: input_number.decrement
-    target:
-      entity_id:
-        - input_number.sertraline_tablets
+  - alias: 'Decrease PREP'
+    service: rest_command.grocy_consume
+    data:
+      productId: 64
+      amount: 1
+  - alias: 'Decrease Sertaline'
+    service: rest_command.grocy_consume
+    data:
+      productId: 65
+      amount: 1
+  - alias: 'Decrease Spray'
+    service: rest_command.grocy_consume
+    data:
+      productId: 63
+      amount: 4
   - service: notify.mobile_app_richard_samsung_phone
     data:
       message: "Medication marked as taken"
