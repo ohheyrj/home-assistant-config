@@ -10,35 +10,36 @@ trigger:
 action:
   - alias: "Actions when washing machine is running"
     choose:
-    - conditions:
-        - alias: "Cleaning mode is on"
-          condition: state
-          entity_id: input_boolean.washing_machine_cleaning
-          state: "on"
-      sequence:
-        - alias: "Send notification"
-          service: notify.mobile_app_richard_samsung_phone
-          data:
-            message: 'Washing machine is running a cleaning cycle'
+      - conditions:
+          - alias: "Cleaning mode is on"
+            condition: state
+            entity_id: input_boolean.washing_machine_cleaning
+            state: "on"
+        sequence:
+          - alias: "Send notification"
+            service: notify.mobile_app_richard_samsung_phone
             data:
-              ttl: 0
-              priority: 'high'
-    - conditions:
-        - alias: "Cleaning mode is off"
-          condition: state
-          entity_id: input_boolean.washing_machine_cleaning
-          state: "off"
-      sequence:
-        - delay: "00:20"
-        - alias: "Still running?"
-          condition: state
-          entity_id: input_select.washing_machine_status
-          state: "Running"
-        - alias: "Decrease pods"
-          service: input_number.decrement
-          target:
-            entity_id: input_number.washing_machine_pods
-        - alias: "Increase cycle"
-          service: counter.increment
-          target:
-            entity_id: counter.washing_machine_cycles
+              message: "Washing machine is running a cleaning cycle"
+              data:
+                ttl: 0
+                priority: "high"
+      - conditions:
+          - alias: "Cleaning mode is off"
+            condition: state
+            entity_id: input_boolean.washing_machine_cleaning
+            state: "off"
+        sequence:
+          - delay: "00:15"
+          - alias: "Still running?"
+            condition: state
+            entity_id: input_select.washing_machine_status
+            state: "Running"
+          - alias: "Decrease Washing Machine Pods"
+            service: rest_command.grocy_consume
+            data:
+              productId: 80
+              amount: 1
+          - alias: "Increase cycle"
+            service: counter.increment
+            target:
+              entity_id: counter.washing_machine_cycles
