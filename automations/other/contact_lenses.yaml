@@ -1,0 +1,19 @@
+---
+alias: Other - Contact Lens Usage
+id: bbb57da6-1a6c-419a-9343-01c5ef210c82
+
+trigger:
+  - platform: event
+    event_type:
+      - tag_scanned
+
+condition:
+  - condition: template
+    value_template: "{{ trigger.event.data.tag_id == '623343d6-d51f-4f04-a1d9-ae90d9755b69'}}"
+
+action:
+  - alias: "Decrease Contact Lens"
+    service: rest_command.grocy_consume
+    data:
+      productId: 81
+      amount: 2

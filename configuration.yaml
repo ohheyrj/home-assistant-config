@@ -23,4 +23,3 @@ http:
 
 scene: !include_dir_list scenes
 lovelace: !include lovelace.yaml
-
