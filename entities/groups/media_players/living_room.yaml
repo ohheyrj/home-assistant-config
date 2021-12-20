@@ -1,0 +1,6 @@
+---
+living_room_media_players:
+  name: Living Room Media Players
+  entities:
+    - media_player.living_room_tv
+    - media_player.living_room_home
