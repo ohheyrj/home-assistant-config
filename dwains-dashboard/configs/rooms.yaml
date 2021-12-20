@@ -1,0 +1,70 @@
+# https://dwainscheeren.github.io/dwains-lovelace-dashboard/configuration/rooms.html
+
+rooms:
+#   - name: Hallway
+#     icon: mdi:key
+#     light: light.hallway
+#     temperature: sensor.hallway_temperature
+#     climate: climate.hallway_climate
+#     humidity: sensor.halway_humidity
+#     motion: binary_sensor.hallway_sensor_motion
+#     door: binary_sensor.hallway_door_contact
+#     window: binary_sensor.hallway_window_contact
+#     safety: sensor.smoke_sensor
+#     device: switch.television
+#     vacuum: 
+#       entity: vacuum.rockrobo
+#       camera: camera.rockrobo_map
+#     plant: plant.hallway_plant
+#     media_player: media_player.awesome_hallway_tv
+#     more_entities:
+#       entities:
+#         - entity: sensor.hallway_motion_battery_level
+#         - entity: sensor.smokedetector_battery
+#   - name: Garage
+#     icon: mdi:garage
+#     light: group.garage_lights
+#     door: group.garage_doors
+#     addons:
+#       - name: Hello room
+#         icon: mdi:puzzle
+#         path: 'dwains-dashboard/addons/rooms/hello-room/page.yaml'
+#         button_path: 'dwains-dashboard/addons/rooms/hello-room/button.yaml'
+#         data:
+#           some_data: 'This is some data parsed.'
+#           some_other_data: 'and some other data.'
+#           entity: vacuum.roborock
+  - name: Bedroom
+    icon: mdi:bed-outline
+    temperature: sensor.bedroom_sensor_temperature
+    humidity: sensor.bedroom_sensor_humidity
+    pressure: sensor.bedroom_sensor_pressure
+    light: group.bedroom_lights
+    device: group.bedroom_devices
+    media_player: group.bedroom_media_players
+  - name: Kitchen
+    icon: mdi:fridge-outline
+    temperature: sensor.kitchen_sensor_temperature
+    humidity: sensor.kitchen_sensor_humidity
+    motion: binary_sensor.kitchen_pir_occupancy
+    light: light.kitchen_lights
+    device: group.kitchen_devices
+  - name: Living Room
+    icon: mdi:sofa-outline
+    temperature: sensor.living_room_sensor_temperature
+    humidity: sensor.living_room_sensor_humidity
+    pressure: sensor.living_room_sensor_pressure
+    light: group.living_room_lights
+    device: group.living_room_devices
+    media_player: group.living_room_media_players
+    climate: climate.room_1
+  - name: Bathroom
+    icon: mdi:bathtub-outline
+    temperature: sensor.bathroom_sensor_temperature
+    humidity: sensor.bathroom_sensor_humidity
+  - name: Hall
+    icon: mdi:key-outline
+    temperature: sensor.hallways_sensor_temperature
+    humidity: sensor.hallways_sensor_humidity
+    safety: binary_sensor.front_door_contact
+    light: group.hall_lights

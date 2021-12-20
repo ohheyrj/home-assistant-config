@@ -1,0 +1,5 @@
+scenes:
+  main_menu: 'true' #Optional
+  entities:
+    - entity: scene.bedroom_lights_dimmed
+    - entity: scene.hall_lamp_dimmed
