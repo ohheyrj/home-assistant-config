@@ -1,0 +1,7 @@
+---
+living_room_devices:
+  name: Living Room Devices
+  entities:
+    - switch.drysoon
+    - switch.air_freshener
+    - switch.christmas_lights

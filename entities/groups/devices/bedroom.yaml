@@ -1,0 +1,8 @@
+---
+bedroom_devices:
+  name: Bedroom Devices
+  entities:
+    - switch.extension_bar
+    - switch.desk
+    - switch.wax_melter
+    - switch.air_freshener_3
