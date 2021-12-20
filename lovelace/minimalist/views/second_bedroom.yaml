@@ -1,0 +1,60 @@
+---
+title: Second Bedroom
+button_card_templates: !include_dir_merge_named ../../minimalist-templates/
+path: second_bedroom
+visible: false
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Second Bedroom
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Lights
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_light_slider_horizontal
+        variables:
+          ulm_card_light_slider_horizontal_name: Main
+        entity: light.second_bedroom_light
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Media
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: 
+          - card_media_player_with_control
+        entity: media_player.second_bedroom_tv
+        name: TV
+      - type: 'custom:button-card'
+        template: 
+          - card_media_player_with_control
+        entity: media_player.second_bedroom_speaker
+        name: Google Home
+      - type: custom:button-card
+        template: edge

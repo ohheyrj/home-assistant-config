@@ -1,0 +1,219 @@
+---
+title: Bedroom
+button_card_templates: !include_dir_merge_named ../../minimalist-templates/
+path: bedroom
+visible: false
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Bedroom
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: chip_icon_state
+        variables:
+          ulm_chip_icon_state_icon: '🌡️'
+          ulm_chip_icon_state_entity: sensor.bedroom_sensor_temperature
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: vertical_buttons
+        entity: scene.bedroom_lights_on
+        name: 'On'
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.bedroom_lights_on
+      - type: 'custom:button-card'
+        template: vertical_buttons
+        entity: scene.bedroom_lights_off
+        name: 'Off'
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.bedroom_lights_off      
+      - type: 'custom:button-card'
+        template: vertical_buttons
+        entity: scene.bedroom_lights_dimmed
+        name: 'Dimmed'
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.bedroom_lights_dimmed
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: vertical_buttons
+        entity: scene.bedroom_tv
+        name: 'TV'
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.bedroom_tv
+      - type: 'custom:button-card'
+        template: vertical_buttons
+        entity: scene.bedroom_movie
+        name: 'Movie'
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.bedroom_movie
+      - type: 'custom:button-card'
+        template: vertical_buttons
+        entity: scene.bedroom_reading
+        name: 'Reading'
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.bedroom_reading
+      - type: 'custom:button-card'
+        template: vertical_buttons
+        entity: scene.bedroom_romantic
+        name: 'Romantic'
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.bedroom_romantic
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Lights
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_light_slider_horizontal
+        variables:
+          ulm_card_light_slider_horizontal_name: Main
+        entity: light.bedroom_ceiling_fixture
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_light_slider
+        variables:
+          ulm_card_light_slider_name: Lamp
+        entity: light.bedroom_lamp
+      - type: 'custom:button-card'
+        template: card_light_slider
+        variables:
+          ulm_card_light_slider_name: Bed
+        entity: light.bed
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_light_slider
+        variables:
+          ulm_card_light_slider_name: Cabinet
+        entity: light.cabinet
+      - type: 'custom:button-card'
+        template: card_light_slider
+        variables:
+          ulm_card_light_slider_name: TV
+        entity: light.bedroom_tv
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Sockets
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_power_outlet
+        entity: switch.desk
+      - type: 'custom:button-card'
+        template: card_power_outlet
+        entity: switch.wax_melter
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_power_outlet
+        entity: switch.air_freshener_3
+      - type: 'custom:button-card'
+        template: card_power_outlet
+        entity: switch.extension_bar
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Media
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: 
+          - card_media_player_with_controls
+        variables:
+          ulm_card_media_player_with_controls_name: TV
+          ulm_card_media_player_with_controls_entity: media_player.bedroom_tv
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: 
+          - card_media_player_with_controls
+        variables:
+          ulm_card_media_player_with_controls_name: Echo
+          ulm_card_media_player_with_controls_entity: media_player.richard_s_echo_dot
+      - type: custom:button-card
+        template: edge

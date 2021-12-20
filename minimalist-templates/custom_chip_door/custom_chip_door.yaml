@@ -1,0 +1,14 @@
+custom_chip_door: # <- change name
+  template: chips # <- change from chips to chip_temperature
+  # from here down you can add/change/delete
+  label: |
+    [[[
+      var icon = '🚪';
+      if (states[variables.door_sensor].state == 'off'){
+        var door_state = 'closed'
+      }
+      if (states[variables.door_sensor].state == 'on'){
+        var door_state = 'open'
+      }
+      return icon + ' ' + door_state ;
+    ]]]

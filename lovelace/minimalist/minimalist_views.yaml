@@ -1,0 +1,9 @@
+---
+title: Minimalist Views
+button_card_templates: !include_dir_merge_named ../../minimalist-templates/
+views:
+  - !include views/bedroom.yaml
+  - !include views/second_bedroom.yaml
+  - !include views/living_room.yaml
+  - !include views/kitchen.yaml
+  - !include views/person_richard.yaml

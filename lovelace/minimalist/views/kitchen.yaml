@@ -1,0 +1,115 @@
+---
+title: Kitchen
+button_card_templates: !include_dir_merge_named ../../minimalist-templates/
+path: kitchen
+visible: false
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Kitchen
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: chip_icon_state
+        variables:
+          ulm_chip_icon_state_icon: '🌡️'
+          ulm_chip_icon_state_entity: sensor.kitchen_sensor_temperature
+      - type: 'custom:button-card'
+        template: chip_icon_state
+        variables:
+          ulm_chip_icon_state_icon: '🍴'
+          ulm_chip_icon_state_entity: counter.dishwasher_cycles
+      - type: 'custom:button-card'
+        template: chip_icon_state
+        variables:
+          ulm_chip_icon_state_icon: '👕'
+          ulm_chip_icon_state_entity: counter.washing_machine_cycles
+      - type: 'custom:button-card'
+        template: chip_icon_state
+        variables:
+          ulm_chip_icon_state_icon: '☕'
+          ulm_chip_icon_state_entity: counter.nespresso_cycles
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Lights
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_light_slider_horizontal
+        variables:
+          ulm_card_light_slider_horizontal_name: Main
+        entity: light.kitchen_lights
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Sockets
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_power_outlet
+        entity: switch.washing_machine
+      - type: 'custom:button-card'
+        template: card_power_outlet
+        entity: switch.dishwasher
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Cleaning
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_input_boolean
+        entity: input_boolean.dishwasher_cleaning
+        name: Dishwasher
+      - type: 'custom:button-card'
+        template: card_input_boolean
+        entity: input_boolean.washing_machine_cleaning
+        name: Washing Machine
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_input_boolean
+        entity: input_boolean.nespresso_cleaning
+        name: Nespresso
+      - type: custom:button-card
+        template: edge
