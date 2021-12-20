@@ -39,6 +39,11 @@ action:
             data:
               productId: 80
               amount: 1
+          - alias: "Decrease Fabric Conditioner"
+            service: rest_command.grocy_consume
+            data:
+              productId: 92
+              amount: 15
           - alias: "Increase cycle"
             service: counter.increment
             target:
