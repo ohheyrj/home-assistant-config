@@ -1,0 +1,16 @@
+---
+alias: Kitchen - Nespresso - Cleaning Mode Finished
+id: 711ac0c2-a494-4d70-83f5-983b2db4d506
+
+trigger:
+  - platform: state
+    entity_id:
+      - input_boolean.nespresso_cleaning
+    from: "on"
+    to: "off"
+
+action:
+  - alias: Reset count
+    service: counter.reset
+    target:
+      entity_id: counter.nespresso_cycles
