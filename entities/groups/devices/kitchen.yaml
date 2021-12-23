@@ -1,0 +1,6 @@
+---
+kitchen_devices:
+  name: Kitchen Devices
+  entities:
+    - switch.dishwasher
+    - switch.washing_machine

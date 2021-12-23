@@ -1,0 +1,7 @@
+---
+bedroom_media_players:
+  name: Bedroom Media Players
+  entities:
+    - media_player.bedroom_tv
+    - media_player.bedroom_xbox
+    - media_player.richard_s_echo_dot

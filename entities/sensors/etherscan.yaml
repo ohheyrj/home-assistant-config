@@ -1,0 +1,3 @@
+---
+platform: etherscan
+address: !secret ether_wallet

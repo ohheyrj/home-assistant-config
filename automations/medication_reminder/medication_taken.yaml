@@ -24,6 +24,16 @@ action:
     data:
       productId: 63
       amount: 4
+  - alias: 'Decrease Multivitamin'
+    service: rest_command.grocy_consume
+    data:
+      productId: 93
+      amount: 1
+  - alias: 'Decrease Vitamin D'
+    service: rest_command.grocy_consume
+    data:
+      productId: 94
+      amount: 1
   - service: notify.mobile_app_richard_samsung_phone
     data:
       message: "Medication marked as taken"

@@ -1,0 +1,159 @@
+---
+title: Living Room
+button_card_templates: !include_dir_merge_named ../../minimalist-templates/
+path: living_room
+visible: false
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Living Room
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: chip_icon_state
+        variables:
+          ulm_chip_icon_state_icon: '🌡️'
+          ulm_chip_icon_state_entity: sensor.living_room_sensor_temperature
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: vertical_buttons
+        entity: scene.living_room_lights_on
+        name: 'On'
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.living_room_lights_on
+      - type: 'custom:button-card'
+        template: vertical_buttons
+        entity: scene.living_room_lights_off
+        name: 'Off'
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.living_room_lights_off
+      - type: 'custom:button-card'
+        template: vertical_buttons
+        entity: scene.living_room_lights_dimmed
+        name: 'Dimmed'
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.living_room_lights_dimmed
+      - type: 'custom:button-card'
+        template: vertical_buttons
+        entity: scene.living_room_movie
+        name: 'Movie'
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.living_room_movie
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Lights
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_light_slider
+        variables:
+          ulm_card_light_slider_name: Main
+        entity: light.living_room_light
+      - type: 'custom:button-card'
+        template: card_light_slider
+        variables:
+          ulm_card_light_slider_name: Wall
+        entity: light.living_room_wall_lights
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Sockets
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_power_outlet
+        entity: switch.drysoon
+      - type: 'custom:button-card'
+        template: card_power_outlet
+        entity: switch.air_freshener
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Media
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template:
+          - card_media_player_with_controls
+        variables:
+          ulm_card_media_player_with_controls_name: TV
+          ulm_card_media_player_with_controls_entity: media_player.living_room_tv
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template:
+          - card_media_player_with_controls
+        variables:
+          ulm_card_media_player_with_controls_name: Google Home
+          ulm_card_media_player_with_controls_entity: media_player.living_room_home
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template:
+          - card_media_player_with_controls
+        variables:
+          ulm_card_media_player_with_controls_name: Tivo
+          ulm_card_media_player_with_controls_entity: media_player.virgin
+      - type: custom:button-card
+        template: edge

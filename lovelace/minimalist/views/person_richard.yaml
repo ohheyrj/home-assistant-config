@@ -1,0 +1,57 @@
+---
+title: Richard
+button_card_templates: !include_dir_merge_named ../../minimalist-templates/
+path: person_richard
+visible: false
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Richard
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: chip_icon_state
+        variables:
+          ulm_chip_icon_state_icon: '🎵'
+          ulm_chip_icon_state_entity: media_player.spotify_richard_annand
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Medication
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_input_boolean
+        entity: input_boolean.medication_taken
+        tap_action:
+          action: call-service
+          service: input_boolean.toggle
+          service_data:
+            entity_id: input_boolean.medication_taken
+      - type: 'custom:button-card'
+        template: card_input_boolean
+        entity: input_boolean.medication_taken_night
+        tap_action:
+          action: call-service
+          service: input_boolean.toggle
+          service_data:
+            entity_id: input_boolean.medication_taken_night
+      - type: custom:button-card
+        template: edge
