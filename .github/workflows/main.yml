@@ -45,7 +45,7 @@ jobs:
           cp -R secrets_redacted.yaml secrets.yaml
           HA_VERSION=$(<.HA_VERSION)
       - name: Install Home Assistant
-        run: pip3 install homeassistant==$(cat .HA_VERSION)
+        run: pip3 install homeassistant==$(cat .HA_VERSION) aiodiscover
       - name: Check config
         run: hass -c . --script check_config --info all
   home_assistant_stable:
