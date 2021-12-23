@@ -20,8 +20,8 @@ ignore: |
   promtail/additional_pipeline_stages.yaml
   home-assistant.log.1
   home-assistant.log.fault
-  minimalist-templates
-  dwains-dashboard
+  minimalist-templates/
+  dwains-dashboard/
 
 extends: default
 

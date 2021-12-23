@@ -19,3 +19,5 @@ ignore: |
   .github/workflows/yaml-lint.yaml
   themes/
   esphome/
+  minimalist-templates/
+  dwains-dashboard/
