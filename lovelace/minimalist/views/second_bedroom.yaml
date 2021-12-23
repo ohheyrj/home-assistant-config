@@ -47,12 +47,12 @@ cards:
       - type: custom:button-card
         template: edge
       - type: 'custom:button-card'
-        template: 
+        template:
           - card_media_player_with_control
         entity: media_player.second_bedroom_tv
         name: TV
       - type: 'custom:button-card'
-        template: 
+        template:
           - card_media_player_with_control
         entity: media_player.second_bedroom_speaker
         name: Google Home

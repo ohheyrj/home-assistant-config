@@ -45,7 +45,7 @@ cards:
           action: call-service
           service: scene.turn_on
           service_data:
-            entity_id: scene.bedroom_lights_off      
+            entity_id: scene.bedroom_lights_off
       - type: 'custom:button-card'
         template: vertical_buttons
         entity: scene.bedroom_lights_dimmed
@@ -198,7 +198,7 @@ cards:
       - type: custom:button-card
         template: edge
       - type: 'custom:button-card'
-        template: 
+        template:
           - card_media_player_with_controls
         variables:
           ulm_card_media_player_with_controls_name: TV
@@ -210,7 +210,7 @@ cards:
       - type: custom:button-card
         template: edge
       - type: 'custom:button-card'
-        template: 
+        template:
           - card_media_player_with_controls
         variables:
           ulm_card_media_player_with_controls_name: Echo
