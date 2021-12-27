@@ -157,6 +157,29 @@ cards:
         template: edge
       - type: custom:button-card
         template: title
+        name: Curtains
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_generic_swap
+        entity: cover.bedroom_curtains
+        tap_action:
+          action: call-service
+          service: cover.toggle
+          service_data:
+            entity_id: cover.bedroom_curtains
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
         name: Sockets
       - type: custom:button-card
         template: edge
