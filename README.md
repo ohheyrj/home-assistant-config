@@ -14,7 +14,7 @@ Below is a break down of the different types of entities that are currently depl
 
 Camera | Device Tracker | Light | Media Player | Switch
 -- | -- | -- | -- | --
-4 | 36 | 21 | 16 | 24
+4 | 42 | 21 | 15 | 22
 
 ### Inputs
 
@@ -32,13 +32,13 @@ Person | Zone
 
 Binary Sensors | Sensors
 -- | --
-55 | 184
+76 | 178
 
 ### Other
 
 Alert | Automation | Group | Scene | Script
 -- | -- | -- | -- | --
-6 | 52 | 15 | 19 | 3
+6 | 53 | 15 | 19 | 3
 
 ## HACS
 
