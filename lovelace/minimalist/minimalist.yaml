@@ -103,3 +103,24 @@ views:
               ulm_card_navigate_icon: mdi:fridge-outline
           - type: custom:button-card
             template: edge
+      - type: horizontal-stack
+        cards:
+          - type: custom:button-card
+            template: edge
+          - type: custom:button-card
+            template: title
+            name: Overviews
+          - type: custom:button-card
+            template: edge
+      - type: horizontal-stack
+        cards:
+          - type: custom:button-card
+            template: edge
+          - type: custom:button-card
+            template: card_navigate
+            variables:
+              ulm_card_navigate_path: /minimalist-views/3d_printer
+              ulm_card_navigate_title: 3D Printer
+              ulm_card_navigate_icon: mdi:printer-3d
+          - type: custom:button-card
+            template: edge

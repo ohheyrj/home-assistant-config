@@ -1,0 +1,28 @@
+---
+alias: Bedroom - Sunset
+id: b8184d39-86ee-42a1-bbb5-d0b1bbff51a4
+
+trigger:
+  - platform: sun
+    event: sunset
+    offset: "00:30:00"
+
+condition:
+  - condition: or
+    conditions:
+      - alias: "xbox on"
+        condition: template
+        value_template: "{{ not is_state('media_player.bedroom_xbox', 'off') }}"
+      - alias: "bedroom tv"
+        condition: template
+        value_template: "{{ not is_state('media_player.bedroom_tv', 'off') }}"
+
+action:
+  - alias: "close curtains"
+    service: cover.close_cover
+    target:
+      entity_id: cover.bedroom_curtains
+  - alias: "turn on lights"
+    service: scene.apply
+    target:
+      entity_id: scene.bedroom_lights_on

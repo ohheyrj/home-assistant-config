@@ -1,0 +1,7 @@
+---
+platform: mqtt
+state_topic: "octoprint_filament/basicfil_red_pla/state"
+name: "Filament Test Sensor"
+value_template: '{{ value_json.state }}'
+json_attributes_topic: "octoprint_filament/basicfil_red_pla/attributes"
+json_attributes_template: "{{ value_json | tojson }}"

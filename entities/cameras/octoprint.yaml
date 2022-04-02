@@ -1,0 +1,5 @@
+---
+platform: mjpeg
+name: Octoprint
+still_image_url: https://octoprint.heisenberg.host/webcam/?action=snapshot
+mjpeg_url: https://octoprint.heisenberg.host/webcam/?action=stream

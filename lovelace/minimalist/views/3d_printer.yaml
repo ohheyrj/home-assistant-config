@@ -1,0 +1,133 @@
+---
+title: 3D Printer
+button_card_templates: !include_dir_merge_named ../../minimalist-templates/
+path: 3d_printer
+visible: false
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: 3D Printer
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_generic_swap
+        entity: switch.3d_printer
+        name: Power
+      - type: 'custom:button-card'
+        template: card_generic_swap
+        entity: binary_sensor.octoprint_connected
+        name: Printer Status
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Current Job
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_generic_swap
+        entity: sensor.octoprint_print_progress
+        name: Print Progress
+        icon: mdi:gauge
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_generic_swap
+        entity: sensor.octoprint_print_time
+        name: Start Time
+      - type: 'custom:button-card'
+        template: card_generic_swap
+        entity: sensor.octoprint_print_estimated_time
+        name: Estimated Finish 
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_generic_swap
+        entity: sensor.octoprint_print_time_left
+        name: Time Left
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Controls
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_input_boolean
+        entity: switch.octoprint_pause_print
+        name: Pause Print
+      - type: 'custom:button-card'
+        template: card_input_boolean
+        entity: switch.octoprint_cancel_print
+        name: Emergency Stop
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_input_boolean
+        entity: switch.octoprint_psu
+        name: PSU
+      - type: 'custom:button-card'
+        template: card_input_boolean
+        entity: switch.octoprint_connect_to_printer
+        name: Connect
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: custom:button-card
+        template: title
+        name: Storage
+      - type: custom:button-card
+        template: edge
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        template: edge
+      - type: 'custom:button-card'
+        template: card_generic_swap
+        entity: sensor.filament_box_temperature
+        name: Temperature
+      - type: 'custom:button-card'
+        template: card_generic_swap
+        entity: sensor.filament_box_humidity
+        name: Humidity
+      - type: custom:button-card
+        template: edge

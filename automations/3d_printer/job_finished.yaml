@@ -1,0 +1,18 @@
+---
+alias: 3D Printer - Job Finished
+id: 443129e1-8f39-49d5-a516-19ef290ee9cc
+
+trigger:
+  platform: state
+  entity_id:
+    - sensor.octoprint_current_state
+  from: "Printing"
+  to: "Operational"
+
+action:
+  - service: notify.mobile_app_richard_samsung_phone
+    data:
+      message: "3D print job finished!"
+      data:
+        ttl: 0
+        priority: 'high'

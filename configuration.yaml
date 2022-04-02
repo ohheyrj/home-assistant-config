@@ -20,6 +20,24 @@ http:
   use_x_forwarded_for: true
   trusted_proxies:
     - 172.30.33.0/24
+    - 10.1.2.3/32
 
 scene: !include_dir_list scenes
 lovelace: !include lovelace.yaml
+
+alexa:
+  smart_home:
+    locale: en-GB
+    filter:
+        include_domains:
+            - light
+            - cover
+            - switch
+            - scene
+        exclude_entity_globs:
+            - light.living_room_wall_light_*
+            - light.kitchen_light_*
+logger:
+  default: warning
+  logs:
+    homeassistant.components.mqtt: debug

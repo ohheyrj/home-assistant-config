@@ -1,0 +1,17 @@
+---
+alias: 3D Printer - 50 Percent Complete
+id: 78bb040d-1af5-42d0-8255-5362acc676e4
+
+trigger:
+  platform: numeric_state
+  entity_id:
+    - sensor.octoprint_job_percentage
+  above: 50
+
+action:
+  - service: notify.mobile_app_richard_samsung_phone
+    data:
+      message: "3D print job at {{ states('sensor.octoprint_job_percentage') }}%. Estimated completion in {{ as_timestamp(states('sensor.octoprint_estimated_finish_time')) | timestamp_custom('%I:%M %p on %d/%m/%Y', False)}}"
+      data:
+        ttl: 0
+        priority: 'high'

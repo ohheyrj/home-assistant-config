@@ -1,0 +1,7 @@
+---
+platform: mqtt_room
+device_id: "iBeacon:7ce9c485-8867-4f22-a9e6-2d5660ebd2d4-100-1"
+name: 'Richard Phone'
+state_topic: 'espresense/devices/iBeacon:7ce9c485-8867-4f22-a9e6-2d5660ebd2d4-100-1'
+timeout: 60
+away_timeout: 120
