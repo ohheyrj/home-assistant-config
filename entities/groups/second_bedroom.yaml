@@ -3,4 +3,3 @@ second_bedroom:
   name: Second Bedroom
   entities:
     - light.second_bedroom_light
-    - switch.second_bedroom_extension_bar

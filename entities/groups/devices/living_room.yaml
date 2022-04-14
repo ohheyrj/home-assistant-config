@@ -4,4 +4,3 @@ living_room_devices:
   entities:
     - switch.drysoon
     - switch.air_freshener
-    - switch.christmas_lights

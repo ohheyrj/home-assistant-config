@@ -3,5 +3,4 @@ hallway:
   name: Hallway
   entities:
     - light.hallway_light
-    - light.hallway_lamp
     - switch.air_freshener_2
