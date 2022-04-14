@@ -1,42 +1,42 @@
----
-alias: Home - Night - Hall Only
-id: cc6c555f-2b9a-4397-8a8f-7198c8c6bbd2
+# ---
+# alias: Home - Night - Hall Only
+# id: cc6c555f-2b9a-4397-8a8f-7198c8c6bbd2
 
-trigger:
-  - platform: state
-    entity_id:
-      - group.bedroom_lights
-      - group.second_bedroom_lights
-    from: "on"
-    to: "off"
+# trigger:
+#   - platform: state
+#     entity_id:
+#       - group.bedroom_lights
+#       - group.second_bedroom_lights
+#     from: "on"
+#     to: "off"
 
-condition:
-  - condition: and
-    conditions:
-    - condition: or
-      conditions:
-        - alias: "Bedroom Lights off"
-          condition: state
-          entity_id: group.bedroom_lights
-          state: "off"
-        - alias: "Second Bedroom Lights Off"
-          condition: state
-          entity_id: group.second_bedroom_lights
-          state: "off"
-    - condition: or
-      conditions:
-        - alias: "Living room TV off"
-          condition: state
-          entity_id: media_player.living_room_tv
-          state: "off"
-        - alias: "Living room TV unavailable"
-          condition: state
-          entity_id: media_player.living_room_tv
-          state: "unavailable"
+# condition:
+#   - condition: and
+#     conditions:
+#     - condition: or
+#       conditions:
+#         - alias: "Bedroom Lights off"
+#           condition: state
+#           entity_id: group.bedroom_lights
+#           state: "off"
+#         - alias: "Second Bedroom Lights Off"
+#           condition: state
+#           entity_id: group.second_bedroom_lights
+#           state: "off"
+#     - condition: or
+#       conditions:
+#         - alias: "Living room TV off"
+#           condition: state
+#           entity_id: media_player.living_room_tv
+#           state: "off"
+#         - alias: "Living room TV unavailable"
+#           condition: state
+#           entity_id: media_player.living_room_tv
+#           state: "unavailable"
 
-action:
-  - alias: "Turn off Hall Lights"
-    service: light.turn_off
-    target:
-      entity_id:
-        - group.hall_lights
+# action:
+#   - alias: "Turn off Hall Lights"
+#     service: light.turn_off
+#     target:
+#       entity_id:
+#         - group.hall_lights

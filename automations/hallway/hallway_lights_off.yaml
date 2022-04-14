@@ -1,0 +1,18 @@
+---
+alias: Hallway - Lights Off
+id: 02cde1a0-3fa4-4c03-aeee-341fac2b250d
+
+trigger:
+  platform: state
+  entity_id:
+    - binary_sensor.hallway_pir_occupancy
+  from: "on"
+  to: "off"
+  for:
+    minutes: 5
+
+action:
+  - alias: "Turn off Lights"
+    service: light.turn_off
+    target:
+      entity_id: light.hallway_light

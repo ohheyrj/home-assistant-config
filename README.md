@@ -14,7 +14,7 @@ Below is a break down of the different types of entities that are currently depl
 
 Camera | Device Tracker | Light | Media Player | Switch
 -- | -- | -- | -- | --
-6 | 47 | 21 | 16 | 31
+6 | 47 | 21 | 17 | 31
 
 ### Inputs
 
@@ -32,13 +32,13 @@ Person | Zone
 
 Binary Sensors | Sensors
 -- | --
-87 | 232
+91 | 238
 
 ### Other
 
 Alert | Automation | Group | Scene | Script
 -- | -- | -- | -- | --
-6 | 57 | 15 | 19 | 3
+6 | 58 | 15 | 19 | 3
 
 ## HACS
 
@@ -51,7 +51,7 @@ Name | Description | Installed Version | Documentation
 Alexa Media Player | This is a custom component to allow control of Amazon Alexa devices in Home Assistant using the unofficial Alexa API. | v3.10.15 | https://github.com/custom-components/alexa_media_player
 Amazon Rekognition | Home Assistant Object detection with Amazon Rekognition | v3.2 | https://github.com/robmarkcole/HASS-amazon-rekognition
 Authenticated | A platform which allows you to get information about sucessfull logins to Home Assistant. | 21.9.0 | https://github.com/custom-components/authenticated
-Aws Codepipeline | An integration to monitor and execute AWS Codepipeline projects within Home Assistant. | v1.0.0 | https://github.com/rj175/home-assistant-aws-codepipeline
+Aws Codepipeline | An integration to monitor and execute AWS Codepipeline projects within Home Assistant. | v1.0.0 | https://github.com/ohheyrj/home-assistant-aws-codepipeline
 Fontawesome | 🔹 Use icons from fontawesome in home-assistant | 2.1.5 | https://github.com/thomasloven/hass-fontawesome
 Generate Readme | Use Jinja and data from Home Assistant to generate your README.md file | 0.4.0 | https://github.com/custom-components/readme
 Google Home | Home Assistant Google Home custom component  | v1.9.6 | https://github.com/leikoilja/ha-google-home
@@ -94,7 +94,6 @@ Vertical Stack In Card | 📐 Home Assistant Card: Similar to vertical/horizonta
 ### Addon Repositories
 - https://github.com/Apipa169/Assistant-Relay-for-Hassio
 - https://github.com/danielwelch/hassio-zigbee2mqtt
-- https://github.com/Forceu/barcodebuddy-homeassistant
 - https://github.com/gdrapp/hass-addons
 - https://github.com/hassio-addons/repository
 - https://github.com/hassio-addons/repository-edge

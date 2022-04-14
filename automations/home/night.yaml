@@ -1,35 +1,35 @@
----
-alias: Home - Night
-id: 03f12df6-ee30-45b8-98ab-3ab31f702883
+# ---
+# alias: Home - Night
+# id: 03f12df6-ee30-45b8-98ab-3ab31f702883
 
-trigger:
-  - platform: state
-    entity_id:
-      - group.bedroom_lights
-      - group.second_bedroom_lights
-    from: "on"
-    to: "off"
+# trigger:
+#   - platform: state
+#     entity_id:
+#       - group.bedroom_lights
+#       - group.second_bedroom_lights
+#     from: "on"
+#     to: "off"
 
-condition:
-  - condition: and
-    conditions:
-      - alias: "Bedroom Lights off"
-        condition: state
-        entity_id: group.bedroom_lights
-        state: "off"
-      - alias: "Second Bedroom Lights Off"
-        condition: state
-        entity_id: group.second_bedroom_lights
-        state: "off"
-      - alias: "All TVs off"
-        condition: state
-        entity_id: group.tvs
-        state: "off"
+# condition:
+#   - condition: and
+#     conditions:
+#       - alias: "Bedroom Lights off"
+#         condition: state
+#         entity_id: group.bedroom_lights
+#         state: "off"
+#       - alias: "Second Bedroom Lights Off"
+#         condition: state
+#         entity_id: group.second_bedroom_lights
+#         state: "off"
+#       - alias: "All TVs off"
+#         condition: state
+#         entity_id: group.tvs
+#         state: "off"
 
-action:
-  - alias: "Turn off Living Room and Hall Lights"
-    service: light.turn_off
-    target:
-      entity_id:
-        - group.living_room_lights
-        - group.hall_lights
+# action:
+#   - alias: "Turn off Living Room and Hall Lights"
+#     service: light.turn_off
+#     target:
+#       entity_id:
+#         - group.living_room_lights
+#         - group.hall_lights
