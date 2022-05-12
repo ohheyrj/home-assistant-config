@@ -4,30 +4,26 @@
 +--------------------------------+---------+--------------------------------------------------------------+
 | Service ID                     | State   | Location                                                     |
 +--------------------------------+---------+--------------------------------------------------------------+
+| notify.mobile_app_richard_sams | missing | scripts/kitchen/washing_machine/washing_machine_drysoon_noti |
+| ung_phone                      |         | fication.yaml:6                                              |
 | lock.lock                      | missing | custom_components/dwains_dashboard/lovelace/views/popups/loc |
 |                                |         | k.yaml:13                                                    |
 | lock.unlock                    | missing | custom_components/dwains_dashboard/lovelace/views/popups/loc |
 |                                |         | k.yaml:23                                                    |
-| tapo_control.ptz               | missing | automations/cameras/cameras_disarm.yaml:11                   |
-| tapo_control.set_privacy_mode  | missing | automations/cameras/cameras_disarm.yaml:19                   |
+| notify.bedroom_tv              | missing | automations/bedroom/movie_paused.yaml:19                     |
 +--------------------------------+---------+--------------------------------------------------------------+
 
--== Missing 65 entity(ies) from 178 found in your config:
+-== Missing 46 entity(ies) from 159 found in your config:
 +--------------------------------+---------+--------------------------------------------------------------+
 | Entity ID                      | State   | Location                                                     |
 +--------------------------------+---------+--------------------------------------------------------------+
-| switch.second_bedroom_extensio | missing | entities/groups/second_bedroom.yaml:6                        |
-| n_bar                          |         |                                                              |
-| light.hallway_lamp             | missing | entities/groups/hallway.yaml:6                               |
-| light.bed                      | unavail | entities/groups/bedroom.yaml:5                               |
-| light.bedroom_standing_lamp    | missing | entities/groups/bedroom.yaml:7                               |
-| light.bedroom_light            | missing | entities/groups/bedroom.yaml:9                               |
-| switch.air_freshener           | unavail | entities/groups/bedroom.yaml:12                              |
+| light.cabinet                  | unavail | entities/groups/bedroom.yaml:5                               |
+| light.bedroom_light            | missing | entities/groups/bedroom.yaml:6                               |
+| switch.air_freshener_3         | unavail | entities/groups/living_room.yaml:8                           |
 | media_player.living_room_tv    | unavail | entities/groups/media_players/tv.yaml:5                      |
-| switch.christmas_lights        | missing | entities/groups/devices/living_room.yaml:7                   |
-| light.standing_lamp            | unavail | entities/groups/light_groups/living_room_lights.yaml:8       |
-| camera.hallway_hd              | unavail | entities/alerts/cameras_on_when_home.yaml:4                  |
-| camera.living_room_hd          | unavail | entities/alerts/camera_living_room_unavailable.yaml:4        |
+| media_player.bedroom_tv        | unavail | entities/groups/media_players/bedroom.yaml:5                 |
+| switch.drysoon                 | unavail | entities/groups/devices/living_room.yaml:5                   |
+| light.bed                      | unavail | entities/groups/light_groups/bedroom_lights.yaml:5           |
 | input_select.localisation_thom | missing | minimalist-templates/button_card_templates.yaml:201,220      |
 | as                             |         |                                                              |
 | switch.octoprint_pause_print   | unavail | lovelace/minimalist/views/3d_printer.yaml:89                 |
@@ -39,22 +35,6 @@
 | scene.living_room_lights_dimme | unknown | lovelace/minimalist/views/living_room.yaml:51,57             |
 | d                              |         |                                                              |
 | scene.living_room_movie        | unknown | lovelace/minimalist/views/living_room.yaml:60,66             |
-| sensor.sonarr_disk_space       | missing | lovelace/main/views/002-overview_dashboard_media.yaml:9      |
-| sensor.sonarr_queue            | missing | lovelace/main/views/002-overview_dashboard_media.yaml:10     |
-| sensor.sonarr_shows            | missing | lovelace/main/views/002-overview_dashboard_media.yaml:11     |
-| sensor.sonarr_upcoming         | missing | lovelace/main/views/002-overview_dashboard_media.yaml:12     |
-| sensor.sonarr_wanted           | missing | lovelace/main/views/002-overview_dashboard_media.yaml:13     |
-| sensor.sabnzbd_daily_total     | missing | lovelace/main/views/002-overview_dashboard_media.yaml:18     |
-| sensor.sabnzbd_weekly_total    | missing | lovelace/main/views/002-overview_dashboard_media.yaml:19     |
-| sensor.sabnzbd_monthly_total   | missing | lovelace/main/views/002-overview_dashboard_media.yaml:20     |
-| sensor.sabnzbd_total           | missing | lovelace/main/views/002-overview_dashboard_media.yaml:21     |
-| sensor.sabnzbd_disk            | missing | lovelace/main/views/002-overview_dashboard_media.yaml:22     |
-| sensor.sabnzbd_disk_free       | missing | lovelace/main/views/002-overview_dashboard_media.yaml:23     |
-| sensor.sabnzbd_left            | missing | lovelace/main/views/002-overview_dashboard_media.yaml:24     |
-| sensor.sabnzbd_queue           | missing | lovelace/main/views/002-overview_dashboard_media.yaml:25     |
-| sensor.sabnzbd_queue_count     | missing | lovelace/main/views/002-overview_dashboard_media.yaml:26     |
-| sensor.sabnzbd_status          | missing | lovelace/main/views/002-overview_dashboard_media.yaml:27     |
-| media_player.fire_tv           | missing | lovelace/main/views/002-overview_dashboard_media.yaml:34     |
 | sensor.living_room_multi_senso | missing | lovelace/main/views/004-overview_dashboard_living_room.yaml: |
 | r                              |         | 9                                                            |
 | sensor.living_room_multi_senso | missing | lovelace/main/views/004-overview_dashboard_living_room.yaml: |
@@ -75,8 +55,10 @@
 | sensor.living_room_sensor_humi | missing | lovelace/main/views/002-overview_dashboard_environment.yaml: |
 | dity                           |         | 17                                                           |
 | sensor.bedroom_multi_sensor_2  | missing | lovelace/main/views/003-overview_dashboard_bedroom.yaml:29   |
+| light.hallway_lamp             | missing | lovelace/main/views/005-overview_dashboard_hallway.yaml:27   |
 | switch.richard_s_echo_dot_shuf | unavail | scripts/spotify_motivation_mix_bedroom_echo.yaml:8           |
 | fle_switch                     |         |                                                              |
+| light.standing_lamp            | unavail | scenes/living_room/living_room_lights_off.yaml:13            |
 | light.hallway                  | missing | scenes/household/house_lights_off.yaml:24                    |
 | light.living_room_main_light   | missing | scenes/household/house_lights_off.yaml:27                    |
 | sensor.kitchen_device          | missing | custom_components/google_home/services.yaml:9                |
@@ -86,18 +68,19 @@
 | sensor.living_room_sensor_pres | missing | dwains-dashboard/configs/rooms.yaml:56                       |
 | sure                           |         |                                                              |
 | binary_sensor.rj175_in_game    | unknown | automations/xbox/xbox_game_stop.yaml:7                       |
-| sensor.octoprint_job_percentag | missing | automations/3d_printer/75_per_complete.yaml:8,14             |
-| e                              |         |                                                              |
-| sensor.octoprint_estimated_fin | missing | automations/3d_printer/75_per_complete.yaml:14               |
+| sensor.octoprint_estimated_fin | unknown | automations/3d_printer/75_per_complete.yaml:14               |
 | ish_time                       |         |                                                              |
-| sensor.octoprint_current_state | missing | automations/3d_printer/job_finished.yaml:8                   |
-| camera.hallway_sd              | unavail | automations/cameras/cameras_disarm.yaml:14,16,22             |
-| camera.living_room_sd          | unavail | automations/cameras/cameras_disarm.yaml:24                   |
-| binary_sensor.hallway_motion   | unavail | automations/cameras/cameras_motion_detected.yaml:7           |
+| sensor.octoprint_current_state | unavail | automations/3d_printer/job_finished.yaml:8                   |
+| binary_sensor.sm_g988b_is_char | missing | automations/bedroom/bedroom_lights_on.yaml:19                |
+| ging_2                         |         |                                                              |
 | binary_sensor.living_room_moti | unavail | automations/cameras/cameras_motion_detected.yaml:8           |
 | on                             |         |                                                              |
+| binary_sensor.richard_samsung_ | missing | automations/notifications/door_open_headphones_on.yaml:19    |
+| phone_music_active             |         |                                                              |
+| sensor.richard_samsung_phone_b | missing | automations/notifications/door_open_headphones_on.yaml:22    |
+| luetooth_connection            |         |                                                              |
 +--------------------------------+---------+--------------------------------------------------------------+
 
--== Report created on 14 Apr 2022 23:16:46
--== Parsed 347 files in 1.62s., ignored 0 files 
+-== Report created on 12 May 2022 09:41:02
+-== Parsed 346 files in 4.20s., ignored 0 files 
 -== Generated in: 0.04s. Validated in: 0.01s.
