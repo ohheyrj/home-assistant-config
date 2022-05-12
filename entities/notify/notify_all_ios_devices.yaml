@@ -1,0 +1,7 @@
+---
+name: all_ios_devices
+platform: group
+services:
+    - service: mobile_app_richards_ipad
+    - service: mobile_app_richards_iphone
+    - service: mobile_app_richards_macbook_pro
