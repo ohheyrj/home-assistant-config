@@ -3,12 +3,10 @@ washing_machine_drysoon_notification:
   alias: Washing Machine DrySoon Notification
   icon: mdi:radiator
   sequence:
-    - service: notify.mobile_app_richard_samsung_phone
+    - service: notify.all_ios_devices
       data:
         message: "Washing machine finished, turn on DrySoon?"
         data:
-          ttl: 0
-          priority: "high"
           actions:
             - action: "drysoon_on_yes"
               title: "Yes"

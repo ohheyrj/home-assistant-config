@@ -34,6 +34,6 @@ action:
     data:
       productId: 94
       amount: 1
-  - service: notify.mobile_app_richard_samsung_phone
+  - service: notify.all_ios_devices
     data:
       message: "Medication marked as taken"

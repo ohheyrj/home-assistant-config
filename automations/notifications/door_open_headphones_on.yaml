@@ -22,9 +22,6 @@ condition:
       value_template: "{{ '38:18:4C:B4:EC:88' in state_attr('sensor.richard_samsung_phone_bluetooth_connection', 'connected_paired_devices') }}"
 
 action:
-  - service: notify.mobile_app_richard_samsung_phone
+  - service: notify.all_ios_devices
     data:
       message: 'Front door has opened'
-      data:
-        ttl: 0
-        priority: 'high'

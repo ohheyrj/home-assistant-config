@@ -21,9 +21,6 @@ action:
     service: light.turn_off
     target:
       entity_id: all
-  - service: notify.mobile_app_richard_samsung_phone
+  - service: notify.all_ios_devices
     data:
       message: "Goodbye! Lights are now off, cameas are on."
-      data:
-        ttl: 0
-        priority: "high"

@@ -18,12 +18,10 @@ condition:
       before: '00:00:00'
 
 action:
-  - service: notify.mobile_app_richard_samsung_phone
+  - service: notify.all_ios_devices
     data:
       message: "Reminder, take your medication"
       data:
-        ttl: 0
-        priority: "high"
         actions:
           - action: "richard_medication_taken"
             title: "I've taken it."

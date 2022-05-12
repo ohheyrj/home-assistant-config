@@ -8,7 +8,7 @@ trigger:
     below: 5
 
 action:
-  - service: notify.mobile_app_richard_samsung_phone
+  - service: notify.all_ios_devices
     data:
       message: >-
         Only {{ states('input_number.washing_machine_pods') | round }} washing machine pods left

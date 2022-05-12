@@ -7,10 +7,15 @@ trigger:
     event_type: rekognition.object_detected
 
 action:
-  - service: notify.mobile_app_richard_samsung_phone
+  - service: notify.all_ios_devices
     data:
       message: "Person Detected At Home!"
       data:
         ttl: 0
         priority: "high"
         image: 'https://y95ihjcc7tt9ahuo95tsm899xhgabk6a.ui.nabu.casa{{ trigger.event.data.saved_file | replace("/config/www/", "/local/") }}'
+        push:
+          sound:
+            name: "default"
+            critical: 1
+            volume: 1.0

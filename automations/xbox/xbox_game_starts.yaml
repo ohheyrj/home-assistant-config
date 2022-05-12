@@ -10,12 +10,10 @@ trigger:
 
 action:
 - alias: "Send Message to Phone"
-  service: notify.mobile_app_richard_samsung_phone
+  service: notify.all_ios_devices
   data:
     message: 'Xbox game started, enable gaming mode?'
     data:
-      ttl: 0
-      priority: 'high'
       actions:
         - action: 'xbox_gaming_mode_yes'
           title: 'Yes'

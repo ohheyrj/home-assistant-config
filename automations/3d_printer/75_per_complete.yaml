@@ -9,9 +9,6 @@ trigger:
   above: 75
 
 action:
-  - service: notify.mobile_app_richard_samsung_phone
+  - service: notify.all_ios_devices
     data:
       message: "3D print job at {{ states('sensor.octoprint_job_percentage') }}%. Estimated completion in {{ as_timestamp(states('sensor.octoprint_estimated_finish_time')) | timestamp_custom('%I:%M %p on %d/%m/%Y', False)}}"
-      data:
-        ttl: 0
-        priority: 'high'

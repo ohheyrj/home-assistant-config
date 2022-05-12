@@ -14,6 +14,6 @@ action:
     data:
       productId: 63
       amount: 4
-  - service: notify.mobile_app_richard_samsung_phone
+  - service: notify.all_ios_devices
     data:
       message: "Nightime medication marked as taken"

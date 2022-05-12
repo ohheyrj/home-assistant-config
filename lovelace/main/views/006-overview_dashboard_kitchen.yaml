@@ -23,11 +23,11 @@ cards:
       - type: custom:mini-graph-card
         name: Washing Machine Consumption
         entities:
-          - sensor.washing_machine_watts
+          - sensor.washing_machine_current_consumption
       - type: custom:mini-graph-card
         name: Dishwasher Consumption
         entities:
-          - sensor.dishwasher_watts
+          - sensor.dishwasher_current_consumption
   - type: entities
     title: Lights
     entities:
@@ -42,7 +42,6 @@ cards:
   - type: entities
     title: States
     entities:
-      - binary_sensor.kitchen_door_contact
       - input_select.dishwasher_status
       - input_select.washing_machine_status
       - input_boolean.nespresso_lid

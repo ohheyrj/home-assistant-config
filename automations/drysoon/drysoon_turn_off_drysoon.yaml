@@ -38,9 +38,6 @@ action:
             target:
               entity_id: switch.drysoon
   - alias: "Send notification"
-    service: notify.mobile_app_richard_samsung_phone
+    service: notify.notify.all_ios_devices
     data:
       message: "Drysoon has reached limit, turning off."
-      data:
-        ttl: 0
-        priority: "high"

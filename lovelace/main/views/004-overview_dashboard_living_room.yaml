@@ -4,13 +4,6 @@ path: living-room
 icon: 'mdi:sofa'
 badges: []
 cards:
-  - type: 'custom:mini-graph-card'
-    entities:
-      - entity: sensor.living_room_multi_sensor
-        color: red
-    hours_to_show: 24
-    points_per_hour: 1
-    name: Living Room Tempature
   - type: entities
     entities:
       - entity: switch.air_freshener

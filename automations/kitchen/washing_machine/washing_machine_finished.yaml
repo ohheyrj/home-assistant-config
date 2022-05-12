@@ -18,12 +18,9 @@ action:
           state: "on"
       sequence:
         - alias: "Send notification"
-          service: notify.mobile_app_richard_samsung_phone
+          service: notify.all_ios_devices
           data:
             message: 'Washing machine has finished cleaning'
-            data:
-              ttl: 0
-              priority: 'high'
         - alias: "Turn off cleaning mode"
           service: input_boolean.turn_off
           target:
@@ -43,12 +40,9 @@ action:
               state: "on"
             sequence:
               - alias: "Send notification"
-                service: notify.mobile_app_richard_samsung_phone
+                service: notify.all_ios_devices
                 data:
                   message: 'Washing machine finished. DrySoon already on'
-                  data:
-                    ttl: 0
-                    priority: 'high'
           - conditions:
             - alias: "DrySoon on"
               condition: state
@@ -59,9 +53,6 @@ action:
                 service: script.washing_machine_drysoon_notification
           default:
           - alias: "Send notification"
-            service: notify.mobile_app_richard_samsung_phone
+            service: notify.all_ios_devices
             data:
               message: "Washing machine finished. Can't determine DrySoon state."
-              data:
-                ttl: 0
-                priority: 'high'

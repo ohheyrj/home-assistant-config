@@ -20,7 +20,7 @@ action:
     target:
       entity_id: input_boolean.xbox_gaming_mode
   - alias: "Send Message to Phone"
-    service: notify.mobile_app_richard_samsung_phone
+    service: notify.all_ios_devices
     data:
       message: 'Xbox game finished, set lights?'
       data:
