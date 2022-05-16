@@ -1,23 +1,23 @@
----
-alias: Bedroom - Lights Off
-id: faceaca0-5754-4b2f-94c8-8bf12b6bf501
+# ---
+# alias: Bedroom - Lights Off
+# id: faceaca0-5754-4b2f-94c8-8bf12b6bf501
 
-trigger:
-  - platform: state
-    entity_id: binary_sensor.bedroom_pir_occupancy
-    from: "on"
-    to: "off"
-    for:
-      minutes: 15
+# trigger:
+#   - platform: state
+#     entity_id: binary_sensor.bedroom_pir_occupancy
+#     from: "on"
+#     to: "off"
+#     for:
+#       minutes: 15
 
-condition:
-  - alias: "TV off"
-    condition: state
-    entity_id: group.bedroom_media_players
-    state: "off"
+# condition:
+#   - alias: "TV off"
+#     condition: state
+#     entity_id: group.bedroom_media_players
+#     state: "off"
 
-action:
-  - alias: "Turn off Lights"
-    service: scene.turn_on
-    target:
-      entity_id: scene.bedroom_lights_off
+# action:
+#   - alias: "Turn off Lights"
+#     service: scene.turn_on
+#     target:
+#       entity_id: scene.bedroom_lights_off
