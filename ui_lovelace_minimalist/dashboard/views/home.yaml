@@ -1,0 +1,103 @@
+title: "Home"
+path: "home"
+cards:
+  - type: "custom:button-card"
+    template: "card_esh_welcome"
+    variables:
+      ulm_weather: "weather.home"
+      entity_1:
+        nav: "house"
+        icon: "mdi:home"
+        name: "House"
+        color: "blue"
+      entity_2:
+        nav: "lights"
+        icon: "mdi:lightbulb"
+        name: "Lights"
+        color: "yellow"
+      entity_3:
+        nav: "security"
+        icon: "mdi:shield"
+        name: Secure
+        color: "green"
+      entity_4:
+        nav: "network"
+        icon: "mdi:nas"
+        name: Lab
+        color: "purple"
+      entity_5:
+        nav: "network"
+        icon: "mdi:flask"
+        name: Lab
+        color: "red"
+  - type: horizontal-stack
+    cards:
+      - type: "custom:button-card"
+        template: card_person
+        tap_action:
+          action: navigate
+          navigation_path: 'richard'
+        variables:
+          ulm_card_person_entity: person.richard
+          ulm_card_person_use_entity_picture: true
+          ulm_card_person_zone1: zone.work
+          ulm_card_person_zone2: zone.school
+      - type: "custom:button-card"
+        template: card_person
+        variables:
+          ulm_card_person_entity: person.ryan
+          ulm_card_person_use_entity_picture: true
+          ulm_card_person_zone1: zone.work
+          ulm_card_person_zone2: zone.school
+  - type: "custom:button-card"
+    template: card_title
+    name: "Rooms"
+  - type: horizontal-stack
+    cards:
+      - type: "custom:button-card"
+        template:
+          - card_esh_room
+          - yellow_on
+        name: Living Room
+        entity: group.living_room_lights
+        icon: mdi:sofa
+        tap_action:
+          action: navigate
+          navigation_path: "living_room"
+        label: '[[[ return states["sensor.room_1_temperature"].state + "°C" ]]]'
+      - type: "custom:button-card"
+        template:
+          - card_esh_room
+          - yellow_on
+        name: Kitchen
+        entity: light.kitchen_lights
+        icon: mdi:knife
+        tap_action:
+          action: navigate
+          navigation_path: "kitchen"
+        label: '[[[ return states["sensor.kitchen_sensor_temperature"].state + "°C" ]]]'
+  - type: horizontal-stack
+    cards:
+      - type: "custom:button-card"
+        template:
+          - card_esh_room
+          - yellow_on
+        name: Hall
+        entity: group.hall_lights
+        icon: mdi:door-open
+        tap_action:
+          action: navigate
+          navigation_path: "hall"
+        label: '[[[ return states["sensor.hallways_sensor_temperature"].state + "°C" ]]]'
+      - type: "custom:button-card"
+        template:
+          - card_esh_room
+          - yellow_on
+        name: Bedroom
+        # entity: light.kitchen_lights
+        icon: mdi:bed
+        entity: group.bedroom_lights
+        tap_action:
+          action: navigate
+          navigation_path: "bedroom"
+        label: '[[[ return states["sensor.bedroom_sensor_temperature"].state + "°C" ]]]'

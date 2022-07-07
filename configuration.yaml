@@ -26,7 +26,7 @@ http:
   trusted_proxies:
     - 172.30.33.0/24
     - 10.1.2.3/32
-
+    - 10.1.2.129/32
 scene: !include_dir_list scenes
 lovelace: !include lovelace.yaml
 
@@ -44,5 +44,8 @@ alexa:
         - light.kitchen_light_*
 logger:
   default: warning
-  logs:
-    homeassistant.components.mqtt: debug
+
+device_tracker:
+  - platform: icloud3
+    username: !secret icloud3_username
+    password: !secret icloud3_password

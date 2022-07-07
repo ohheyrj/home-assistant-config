@@ -4,3 +4,4 @@ recorder:
   exclude:
     domains:
       - automation
+      - sensor.icloud3_event_log

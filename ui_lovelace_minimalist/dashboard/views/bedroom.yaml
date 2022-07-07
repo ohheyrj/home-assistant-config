@@ -1,0 +1,142 @@
+title: "Bedroom"
+path: "bedroom"
+cards:
+  - type: "custom:button-card"
+    template: chip_back
+    variables:
+      ulm_chip_back_path: /ui-lovelace-minimalist/home
+  - type: horizontal-stack
+    cards:
+      - type: "custom:button-card"
+        template: card_graph
+        variables:
+          ulm_card_graph_color: "var(--google-blue)"
+          ulm_card_graph_name: Temperature
+          ulm_card_graph_entity: sensor.bedroom_sensor_temperature
+          ulm_card_graph_type: fill
+          ulm_card_graph_hours: 24
+      - type: "custom:button-card"
+        template: card_graph
+        variables:
+          ulm_card_graph_color: "var(--google-red)"
+          ulm_card_graph_name: Humidity
+          ulm_card_graph_entity: sensor.bedroom_sensor_humidity
+          ulm_card_graph_type: fill
+          ulm_card_graph_hours: 24
+  - type: "custom:button-card"
+    template: card_title
+    label: "Scenes"
+  - type: "custom:button-card"
+    template:
+      - card_scenes
+    variables:
+      entity_1:
+        entity_id: scene.bedroom_lights_dimmed
+        icon: mdi:lightbulb-on
+        icon_color: "yellow"
+        name: "Dim"
+        bg_color: "yellow"
+      entity_2:
+        entity_id: scene.bedroom_lights_on
+        icon: mdi:lightbulb-on
+        icon_color: "blue"
+        name: "On"
+        bg_color: "blue"
+      entity_3:
+        entity_id: scene.bedroom_lights_off
+        icon: mdi:lightbulb-off
+        icon_color: "purple"
+        name: "Off"
+        bg_color: "purple"
+      entity_4:
+        entity_id: scene.bedroom_romantic
+        icon: mdi:heart
+        icon_color: "red"
+        name: "Romantic"
+        bg_color: "red"
+      entity_5:
+        entity_id: scene.bedroom_reading
+        icon: mdi:book
+        icon_color: "green"
+        name: "Reading"
+        bg_color: "green"
+  - type: "custom:button-card"
+    template: card_title
+    label: "Curtains"
+  - type: "custom:button-card"
+    template: card_cover
+    entity: cover.bedroom_curtains
+    variables:
+      ulm_card_cover_enable_controls: true
+      ulm_card_cover_enable_slider: true
+      ulm_card_cover_display_left_right: true
+  - type: "custom:button-card"
+    template: card_title
+    label: "Lights"
+  - type: horizontal-stack
+    cards:
+      - type: "custom:button-card"
+        template: card_light
+        entity: light.bedroom_ceiling_fixture
+        variables:
+          ulm_card_light_enable_slider: true
+          ulm_card_light_enable_color: true
+          ulm_card_light_force_background_color: true
+          ulm_card_light_enable_collapse: true
+      - type: "custom:button-card"
+        template: card_light
+        entity: light.bedroom_lamp
+        variables:
+          ulm_card_light_enable_slider: true
+          ulm_card_light_enable_color: true
+          ulm_card_light_force_background_color: true
+          ulm_card_light_enable_collapse: true
+  - type: horizontal-stack
+    cards:
+      - type: "custom:button-card"
+        template: card_light
+        entity: light.cabinet
+        variables:
+          ulm_card_light_enable_slider: true
+          ulm_card_light_enable_color: true
+          ulm_card_light_force_background_color: true
+          ulm_card_light_enable_collapse: true
+      - type: "custom:button-card"
+        template: card_light
+        entity: light.bedroom_tv
+        variables:
+          ulm_card_light_enable_slider: true
+          ulm_card_light_enable_color: true
+          ulm_card_light_force_background_color: true
+          ulm_card_light_enable_collapse: true
+  - type: "custom:button-card"
+    template: card_light
+    entity: light.bed
+    variables:
+      ulm_card_light_enable_slider: true
+      ulm_card_light_enable_color: true
+      ulm_card_light_force_background_color: true
+      ulm_card_light_enable_collapse: true
+  - type: "custom:button-card"
+    template: card_title
+    label: "Devices"
+  - type: horizontal-stack
+    cards:
+      - type: 'custom:button-card'
+        template: card_power_outlet
+        entity: switch.extension_bar
+        name: Extension
+      - type: 'custom:button-card'
+        template: card_power_outlet
+        entity: switch.desk
+        name: Desk
+  - type: horizontal-stack
+    cards:
+      - type: 'custom:button-card'
+        template: card_power_outlet
+        entity: switch.wax_melter
+        name: Wax Melter
+      - type: 'custom:button-card'
+        template: card_power_outlet
+        entity: switch.air_freshener_3
+        name: Air Freshener

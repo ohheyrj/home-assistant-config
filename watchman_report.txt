@@ -1,57 +1,50 @@
 -== Watchman Report ==- 
 
--== Missing 4 service(s) from 40 found in your config:
+-== Missing 4 service(s) from 41 found in your config:
 +--------------------------------+---------+--------------------------------------------------------------+
 | Service ID                     | State   | Location                                                     |
 +--------------------------------+---------+--------------------------------------------------------------+
-| notify.mobile_app_richard_sams | missing | scripts/kitchen/washing_machine/washing_machine_drysoon_noti |
-| ung_phone                      |         | fication.yaml:6                                              |
-| lock.lock                      | missing | custom_components/dwains_dashboard/lovelace/views/popups/loc |
-|                                |         | k.yaml:13                                                    |
-| lock.unlock                    | missing | custom_components/dwains_dashboard/lovelace/views/popups/loc |
-|                                |         | k.yaml:23                                                    |
+| dwains_dashboard.installed     | missing | custom_components/dwains_dashboard/lovelace/views/main/01.ho |
+|                                |         | mepage.yaml:33                                               |
+| dwains_dashboard.reload        | missing | custom_components/dwains_dashboard/lovelace/views/main/more_ |
+|                                |         | page/settings.yaml:69                                        |
+| script.icloud3_command_event_l | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| og_gary                        |         | gary-2-zones-4x3.yaml:59,120                                 |
 | notify.bedroom_tv              | missing | automations/bedroom/movie_paused.yaml:19                     |
 +--------------------------------+---------+--------------------------------------------------------------+
 
--== Missing 46 entity(ies) from 159 found in your config:
+-== Missing 128 entity(ies) from 261 found in your config:
 +--------------------------------+---------+--------------------------------------------------------------+
 | Entity ID                      | State   | Location                                                     |
 +--------------------------------+---------+--------------------------------------------------------------+
-| light.cabinet                  | unavail | entities/groups/bedroom.yaml:5                               |
+| light.cabinet                  | missing | entities/groups/bedroom.yaml:5                               |
 | light.bedroom_light            | missing | entities/groups/bedroom.yaml:6                               |
+| light.tv_lights                | missing | entities/groups/living_room.yaml:7                           |
 | switch.air_freshener_3         | unavail | entities/groups/living_room.yaml:8                           |
 | media_player.living_room_tv    | unavail | entities/groups/media_players/tv.yaml:5                      |
-| media_player.bedroom_tv        | unavail | entities/groups/media_players/bedroom.yaml:5                 |
+| media_player.bedroom_xbox      | unavail | entities/groups/media_players/tv.yaml:6                      |
+| media_player.bedroom_tv        | missing | entities/groups/media_players/bedroom.yaml:5                 |
 | switch.drysoon                 | unavail | entities/groups/devices/living_room.yaml:5                   |
-| light.bed                      | unavail | entities/groups/light_groups/bedroom_lights.yaml:5           |
+| light.bed                      | missing | entities/groups/light_groups/bedroom_lights.yaml:5           |
+| light.bedroom_tv               | missing | entities/groups/light_groups/bedroom_lights.yaml:8           |
+| light.hall_lamp                | unavail | entities/groups/light_groups/hall_lights.yaml:5              |
 | input_select.localisation_thom | missing | minimalist-templates/button_card_templates.yaml:201,220      |
 | as                             |         |                                                              |
+| input_boolean.welcome_toggle   | missing | lovelace/minimalist/minimalist.yaml:5,7                      |
+| weather.your_weather           | missing | lovelace/minimalist/minimalist.yaml:8                        |
 | switch.octoprint_pause_print   | unavail | lovelace/minimalist/views/3d_printer.yaml:89                 |
 | switch.octoprint_cancel_print  | unavail | lovelace/minimalist/views/3d_printer.yaml:93                 |
 | sensor.living_room_sensor_temp | missing | lovelace/minimalist/views/living_room.yaml:24                |
 | erature                        |         |                                                              |
-| scene.living_room_lights_on    | unknown | lovelace/minimalist/views/living_room.yaml:33,39             |
-| scene.living_room_lights_off   | unknown | lovelace/minimalist/views/living_room.yaml:42,48             |
-| scene.living_room_lights_dimme | unknown | lovelace/minimalist/views/living_room.yaml:51,57             |
-| d                              |         |                                                              |
 | scene.living_room_movie        | unknown | lovelace/minimalist/views/living_room.yaml:60,66             |
+| media_player.virgin            | missing | lovelace/minimalist/views/living_room.yaml:157               |
 | sensor.living_room_multi_senso | missing | lovelace/main/views/004-overview_dashboard_living_room.yaml: |
-| r                              |         | 9                                                            |
-| sensor.living_room_multi_senso | missing | lovelace/main/views/004-overview_dashboard_living_room.yaml: |
-| r_2                            |         | 20                                                           |
+| r_2                            |         | 13                                                           |
 | scene.living_room_watching_tv  | missing | lovelace/main/views/004-overview_dashboard_living_room.yaml: |
-|                                |         | 35                                                           |
+|                                |         | 28                                                           |
 | media_player.ht_xt2_37e1d32_2  | missing | lovelace/main/views/004-overview_dashboard_living_room.yaml: |
-|                                |         | 44                                                           |
-| sensor.washing_machine_watts   | missing | lovelace/main/views/006-overview_dashboard_kitchen.yaml:26   |
-| sensor.dishwasher_watts        | missing | lovelace/main/views/006-overview_dashboard_kitchen.yaml:30   |
-| binary_sensor.kitchen_door_con | missing | lovelace/main/views/006-overview_dashboard_kitchen.yaml:45   |
-| tact                           |         |                                                              |
-| input_boolean.nespresso_lid    | unavail | lovelace/main/views/006-overview_dashboard_kitchen.yaml:48   |
-| person.richard_annand          | missing | lovelace/main/views/001-overview_dashboard_home.yaml:7       |
-| person.ryan_mcintosh           | missing | lovelace/main/views/001-overview_dashboard_home.yaml:8       |
-| scene.smell_nice               | missing | lovelace/main/views/001-overview_dashboard_home.yaml:17,22   |
-| scene.lights_on                | missing | lovelace/main/views/001-overview_dashboard_home.yaml:23,28   |
+|                                |         | 37                                                           |
+| input_boolean.nespresso_lid    | unavail | lovelace/main/views/006-overview_dashboard_kitchen.yaml:47   |
 | sensor.living_room_sensor_humi | missing | lovelace/main/views/002-overview_dashboard_environment.yaml: |
 | dity                           |         | 17                                                           |
 | sensor.bedroom_multi_sensor_2  | missing | lovelace/main/views/003-overview_dashboard_bedroom.yaml:29   |
@@ -61,9 +54,178 @@
 | light.standing_lamp            | unavail | scenes/living_room/living_room_lights_off.yaml:13            |
 | light.hallway                  | missing | scenes/household/house_lights_off.yaml:24                    |
 | light.living_room_main_light   | missing | scenes/household/house_lights_off.yaml:27                    |
+| sensor.richards_iphone_battery | missing | ui_lovelace_minimalist/dashboard/views/richard.yaml:15,17    |
+| _state_2                       |         |                                                              |
+| sensor.richards_apple_watch_ba | missing | ui_lovelace_minimalist/dashboard/views/richard.yaml:23,25    |
+| ttery_state                    |         |                                                              |
+| sensor.richards_macbook_pro_ba | missing | ui_lovelace_minimalist/dashboard/views/richard.yaml:33,35    |
+| ttery_state                    |         |                                                              |
+| sensor.richards_ipad_battery_s | missing | ui_lovelace_minimalist/dashboard/views/richard.yaml:41,43    |
+| tate_2                         |         |                                                              |
+| zone.school                    | missing | ui_lovelace_minimalist/dashboard/views/home.yaml:44,51       |
 | sensor.kitchen_device          | missing | custom_components/google_home/services.yaml:9                |
 | sensor.kitchen_alarms          | missing | custom_components/google_home/services.yaml:20               |
 | sensor.kitchen_timers          | missing | custom_components/google_home/services.yaml:38               |
+| camera.front_door              | missing | custom_components/browser_mod/services.yaml:47               |
+| sensor.dwains_dashboard_latest | missing | custom_components/dwains_dashboard/lovelace/views/main/more_ |
+| _version                       |         | page/settings.yaml:31                                        |
+| climate.hvac                   | missing | custom_components/ui_lovelace_minimalist/__ui_minimalist__/u |
+|                                |         | lm_templates/popup_templates/popup_buttons/popup_button_airc |
+|                                |         | onditionner.yaml:22                                          |
+| device_tracker.gary_iphone     | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+|                                |         | gary-2-zones-4x3.yaml:13,74                                  |
+| sensor.gary_iphone_interval    | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+|                                |         | gary-2-zones-4x3.yaml:15                                     |
+| sensor.gary_iphone_travel_time | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+|                                |         | gary-2-zones-4x3.yaml:18                                     |
+| sensor.gary_iphone_zone_distan | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| ce                             |         | gary-2-zones-4x3.yaml:21                                     |
+| sensor.gary_iphone_waze_distan | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| ce                             |         | gary-2-zones-4x3.yaml:28                                     |
+| sensor.gary_iphone_calc_distan | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| ce                             |         | gary-2-zones-4x3.yaml:31                                     |
+| sensor.gary_iphone_dir_of_trav | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| el                             |         | gary-2-zones-4x3.yaml:34                                     |
+| input_boolean.gary_driving_fla | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| g                              |         | gary-2-zones-4x3.yaml:37,98                                  |
+| sensor.gary_iphone_last_locate | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| d                              |         | gary-2-zones-4x3.yaml:45                                     |
+| sensor.gary_iphone_last_update | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+|                                |         | gary-2-zones-4x3.yaml:48                                     |
+| sensor.gary_iphone_next_update | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+|                                |         | gary-2-zones-4x3.yaml:51                                     |
+| sensor.gary_iphone_poll_count  | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+|                                |         | gary-2-zones-4x3.yaml:54                                     |
+| sensor.gary_iphone_info        | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+|                                |         | gary-2-zones-4x3.yaml:63                                     |
+| sensor.whse_gary_iphone_interv | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| al                             |         | gary-2-zones-4x3.yaml:76                                     |
+| sensor.whse_gary_iphone_travel | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| _time                          |         | gary-2-zones-4x3.yaml:79                                     |
+| sensor.whse_gary_iphone_zone_d | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| istance                        |         | gary-2-zones-4x3.yaml:82                                     |
+| sensor.whse_gary_iphone_waze_d | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| istance                        |         | gary-2-zones-4x3.yaml:89                                     |
+| sensor.whse_gary_iphone_calc_d | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| istance                        |         | gary-2-zones-4x3.yaml:92                                     |
+| sensor.whse_gary_iphone_dir_of | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| _travel                        |         | gary-2-zones-4x3.yaml:95                                     |
+| sensor.whse_gary_iphone_last_l | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| ocated                         |         | gary-2-zones-4x3.yaml:106                                    |
+| sensor.whse_gary_iphone_last_u | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| pdate                          |         | gary-2-zones-4x3.yaml:109                                    |
+| sensor.whse_gary_iphone_next_u | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| pdate                          |         | gary-2-zones-4x3.yaml:112                                    |
+| sensor.whse_gary_iphone_poll_c | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| ount                           |         | gary-2-zones-4x3.yaml:115                                    |
+| sensor.whse_gary_iphone_info   | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+|                                |         | gary-2-zones-4x3.yaml:124                                    |
+| script.icloud3_update_location | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+| _gary                          |         | gary-2-zones-4x3.yaml:130                                    |
+| script.homeassistant_restart   | missing | custom_components/icloud3/sample-lovelace-cards/ui-lovelace- |
+|                                |         | gary-2-zones-4x3.yaml:131                                    |
+| device_tracker.lillian_iphone  | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+|                                |         | lovelace_gc_lc_4x3.yaml:76                                   |
+| sensor.lillian_iphone_interval | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+|                                |         | lovelace_gc_lc_4x3.yaml:78                                   |
+| sensor.lillian_iphone_travel_t | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| ime                            |         | lovelace_gc_lc_4x3.yaml:81                                   |
+| sensor.lillian_iphone_zone_dis | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| tance                          |         | lovelace_gc_lc_4x3.yaml:84                                   |
+| sensor.lillian_iphone_waze_dis | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| tance                          |         | lovelace_gc_lc_4x3.yaml:91                                   |
+| sensor.lillian_iphone_calc_dis | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| tance                          |         | lovelace_gc_lc_4x3.yaml:94                                   |
+| sensor.lillian_iphone_dir_of_t | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| ravel                          |         | lovelace_gc_lc_4x3.yaml:97                                   |
+| input_boolean.lillian_driving_ | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| flag                           |         | lovelace_gc_lc_4x3.yaml:100                                  |
+| sensor.lillian_iphone_last_loc | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| ated                           |         | lovelace_gc_lc_4x3.yaml:108                                  |
+| sensor.lillian_iphone_last_upd | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| ate                            |         | lovelace_gc_lc_4x3.yaml:111                                  |
+| sensor.lillian_iphone_next_upd | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| ate                            |         | lovelace_gc_lc_4x3.yaml:114                                  |
+| sensor.lillian_iphone_poll_cou | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| nt                             |         | lovelace_gc_lc_4x3.yaml:117                                  |
+| sensor.lillian_iphone_info     | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+|                                |         | lovelace_gc_lc_4x3.yaml:123                                  |
+| sensor.gary_iphone_badge       | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+|                                |         | lovelace_all.yaml:20                                         |
+| sensor.lillian_iphone_badge    | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+|                                |         | lovelace_all.yaml:22                                         |
+| sensor.garage_door_badge       | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+|                                |         | lovelace_all.yaml:24                                         |
+| zone.quail                     | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+|                                |         | lovelace_all.yaml:32                                         |
+| zone.whse                      | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+|                                |         | lovelace_all.yaml:33                                         |
+| script.icloud3_command_resume_ | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| polling                        |         | lovelace_all.yaml:153                                        |
+| script.icloud3_command_pause_p | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| olling                         |         | lovelace_all.yaml:154                                        |
+| script.icloud3_command_restart | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+|                                |         | lovelace_all.yaml:155                                        |
+| script.icloud3_set_interval_1_ | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| min                            |         | lovelace_all.yaml:157                                        |
+| script.icloud3_set_interval_5_ | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| min                            |         | lovelace_all.yaml:158                                        |
+| script.icloud3_set_interval_15 | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| _min                           |         | lovelace_all.yaml:159                                        |
+| script.icloud3_set_interval_30 | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| _min                           |         | lovelace_all.yaml:160                                        |
+| script.icloud3_set_interval_1_ | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| hrs                            |         | lovelace_all.yaml:161                                        |
+| script.icloud3_set_interval_5_ | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| hrs                            |         | lovelace_all.yaml:162                                        |
+| script.icloud3_command_toggle_ | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| waze                           |         | lovelace_all.yaml:164                                        |
+| script.icloud3_command_reset_w | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| aze_range                      |         | lovelace_all.yaml:165                                        |
+| script.icloud3_lost_iphone_inv | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| alid                           |         | lovelace_all.yaml:166                                        |
+| script.icloud3_update_location | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+|                                |         | lovelace_all.yaml:167                                        |
+| script.icloud3_command_resume_ | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| polling_gary                   |         | lovelace_all.yaml:173                                        |
+| script.icloud3_command_pause_p | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| olling_gary                    |         | lovelace_all.yaml:174                                        |
+| script.icloud3_set_interval_2_ | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| min_gary                       |         | lovelace_all.yaml:175                                        |
+| script.icloud3_set_interval_10 | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| _min_gary                      |         | lovelace_all.yaml:176                                        |
+| script.icloud3_set_interval_1_ | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| min_lillian                    |         | lovelace_all.yaml:177                                        |
+| script.icloud3_set_interval_10 | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| _min_lillian                   |         | lovelace_all.yaml:178                                        |
+| script.icloud3_command_gary_ip | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| hone_zone_home                 |         | lovelace_all.yaml:179                                        |
+| script.icloud3_lost_iphone_gar | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| y                              |         | lovelace_all.yaml:181                                        |
+| script.icloud3_lost_iphone_lil | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| lian                           |         | lovelace_all.yaml:187                                        |
+| script.icloud3_lost_iwatch_lil | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| lian                           |         | lovelace_all.yaml:188                                        |
+| script.icloud3_gary_iphone_see | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| _away                          |         | lovelace_all.yaml:189                                        |
+| script.icloud3_update_location | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| _lillian                       |         | lovelace_all.yaml:190                                        |
+| script.icloud3_command_logleve | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| l_debug                        |         | lovelace_all.yaml:194                                        |
+| script.icloud3_command_logleve | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| l_intervalcalc                 |         | lovelace_all.yaml:195                                        |
+| script.icloud3_command_logleve | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| l_eventlog                     |         | lovelace_all.yaml:196                                        |
+| script.icloud3_command_logleve | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| l_info                         |         | lovelace_all.yaml:197                                        |
+| script.icloud3_command_logleve | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| l_debug_eventlog               |         | lovelace_all.yaml:198                                        |
+| script.icloud3_command_logleve | missing | custom_components/icloud3/sample-lovelace-cards/ui-          |
+| l_intervalcalc_eventlog        |         | lovelace_all.yaml:199                                        |
+| sensor.gary_iphone_travel_dist | missing | custom_components/icloud3/sample-lovelace-cards/config-      |
+| ance                           |         | lovelace_gc_lc_evlog.yaml:30                                 |
+| sensor.lillian_iphone_travel_d | missing | custom_components/icloud3/sample-lovelace-cards/config-      |
+| istance                        |         | lovelace_gc_lc_evlog.yaml:62                                 |
 | media_player.vardagsrum        | missing | custom_components/spotcast/services.yaml:21                  |
 | sensor.living_room_sensor_pres | missing | dwains-dashboard/configs/rooms.yaml:56                       |
 | sure                           |         |                                                              |
@@ -71,16 +233,16 @@
 | sensor.octoprint_estimated_fin | unknown | automations/3d_printer/75_per_complete.yaml:14               |
 | ish_time                       |         |                                                              |
 | sensor.octoprint_current_state | unavail | automations/3d_printer/job_finished.yaml:8                   |
-| binary_sensor.sm_g988b_is_char | missing | automations/bedroom/bedroom_lights_on.yaml:19                |
-| ging_2                         |         |                                                              |
+| binary_sensor.hallway_motion   | unavail | automations/cameras/cameras_motion_detected.yaml:7           |
 | binary_sensor.living_room_moti | unavail | automations/cameras/cameras_motion_detected.yaml:8           |
 | on                             |         |                                                              |
+| person.richard_annand          | missing | automations/notifications/door_open_headphones_on.yaml:15    |
 | binary_sensor.richard_samsung_ | missing | automations/notifications/door_open_headphones_on.yaml:19    |
 | phone_music_active             |         |                                                              |
 | sensor.richard_samsung_phone_b | missing | automations/notifications/door_open_headphones_on.yaml:22    |
 | luetooth_connection            |         |                                                              |
 +--------------------------------+---------+--------------------------------------------------------------+
 
--== Report created on 12 May 2022 09:41:02
--== Parsed 346 files in 4.20s., ignored 0 files 
--== Generated in: 0.04s. Validated in: 0.01s.
+-== Report created on 07 Jul 2022 10:47:27
+-== Parsed 634 files in 7.17s., ignored 0 files 
+-== Generated in: 0.10s. Validated in: 0.01s.

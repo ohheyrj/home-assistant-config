@@ -1,0 +1,59 @@
+title: "Richard"
+path: "richard"
+cards:
+  - type: "custom:button-card"
+    template: chip_back
+    variables:
+      ulm_chip_back_path: /ui-lovelace-minimalist/home
+  - type: "custom:button-card"
+    template: card_title
+    label: "Batteries"
+  - type: horizontal-stack
+    cards:
+      - type: 'custom:button-card'
+        template: card_battery
+        entity: sensor.richards_iphone_battery_state_2
+        variables:
+            ulm_card_battery_charger_type_entity_id: sensor.richards_iphone_battery_state_2
+            ulm_card_battery_battery_level_danger: 30
+            ulm_card_battery_battery_level_warning: 80
+        name: iPhone
+      - type: 'custom:button-card'
+        template: card_battery
+        entity: sensor.richards_apple_watch_battery_state
+        variables:
+            ulm_card_battery_charger_type_entity_id: sensor.richards_apple_watch_battery_state
+            ulm_card_battery_battery_level_danger: 30
+            ulm_card_battery_battery_level_warning: 80
+        name: Watch
+  - type: horizontal-stack
+    cards:
+      - type: 'custom:button-card'
+        template: card_battery
+        entity: sensor.richards_macbook_pro_battery_state
+        variables:
+            ulm_card_battery_charger_type_entity_id: sensor.richards_macbook_pro_battery_state
+            ulm_card_battery_battery_level_danger: 30
+            ulm_card_battery_battery_level_warning: 80
+        name: MacBook Pro
+      - type: 'custom:button-card'
+        template: card_battery
+        entity: sensor.richards_ipad_battery_state_2
+        variables:
+            ulm_card_battery_charger_type_entity_id: sensor.richards_ipad_battery_state_2
+            ulm_card_battery_battery_level_danger: 30
+            ulm_card_battery_battery_level_warning: 80
+        name: iPad
+  - type: "custom:button-card"
+    template: card_title
+    label: "Medication"
+  - type: horizontal-stack
+    cards:
+      - type: 'custom:button-card'
+        template: card_input_boolean
+        entity: input_boolean.medication_taken
+        name: Medication Taken
+      - type: 'custom:button-card'
+        template: card_input_boolean
+        entity: input_boolean.medication_taken_night
+        name: Night Medication Taken

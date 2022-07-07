@@ -8,14 +8,14 @@ dashboards:
     icon: mdi:home
     show_in_sidebar: true
     require_admin: false
-  lovelace-minimalist:
-    mode: yaml
-    filename: lovelace/minimalist/minimalist.yaml
-    title: Minimalist
-    icon: mdi:tablet-cellphone
-    show_in_sidebar: true
-  minimalist-views:
-    mode: yaml
-    filename: lovelace/minimalist/minimalist_views.yaml
-    title: Minimalist Views
-    show_in_sidebar: true
+  # lovelace-minimalist:
+  #   mode: yaml
+  #   filename: lovelace/minimalist/minimalist.yaml
+  #   title: Minimalist
+  #   icon: mdi:tablet-cellphone
+  #   show_in_sidebar: true
+  # minimalist-views:
+  #   mode: yaml
+  #   filename: lovelace/minimalist/minimalist_views.yaml
+  #   title: Minimalist Views
+  #   show_in_sidebar: true
