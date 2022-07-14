@@ -1,0 +1,22 @@
+---
+alias: Other - Battery Charger - Turn Off
+id: 4870c32d-7cca-408f-ad86-0b309da1cc37
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.battery_charger_current_energy
+    below: 4.00
+    for:
+      minutes: 5
+condition:
+  - condition: state
+    entity_id: switch.battery_charger
+    state: 'on'
+action:
+  - alias: "Send notification"
+    service: notify.all_ios_devices
+    data:
+      message: "Turning off battery charger"
+  - alias: "Turn off Battery Charger"
+    service: switch.turn_off
+    target:
+      entity_id: switch.battery_charger
