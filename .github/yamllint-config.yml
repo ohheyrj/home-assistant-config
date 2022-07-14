@@ -21,3 +21,4 @@ ignore: |
   esphome/
   minimalist-templates/
   dwains-dashboard/
+  ui_lovelace_minimalist/custom_cards/
