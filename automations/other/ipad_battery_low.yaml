@@ -1,0 +1,13 @@
+---
+alias: Other - iPad Battery Low
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.richards_ipad_battery
+    below: 25
+
+action:
+  - alias: "Send notification"
+    service: notify.telegram_home_assistant
+    data:
+      title: "iPad Battery"
+      message: "🪫 iPad battery needs charged"
