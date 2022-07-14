@@ -3,4 +3,4 @@ devices:
   - device_name: richards_iphone
   - device_name: richards_ipad
   - device_name: richards_apple_watch
-    noiosapp: True
+    noiosapp: true
