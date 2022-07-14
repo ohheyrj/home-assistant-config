@@ -58,7 +58,7 @@ cards:
       - type: 'custom:button-card'
         template: card_generic_swap
         entity: sensor.octoprint_print_estimated_time
-        name: Estimated Finish 
+        name: Estimated Finish
       - type: custom:button-card
         template: edge
   - type: horizontal-stack
