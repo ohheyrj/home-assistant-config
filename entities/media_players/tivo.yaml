@@ -1,9 +1,0 @@
----
-platform: virgintivo
-
-tivos:
-  1:
-    name: Virgin
-    host: 10.1.2.59
-tvchannellists:
-  enable: true
