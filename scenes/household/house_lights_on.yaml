@@ -5,29 +5,11 @@ entities:
     brightness: 255
     color_name: 'white'
     state: 'on'
-  light.bedroom_tv:
-    brightness: 255
-    color_name: 'homeassistant'
-    state: 'on'
-  light.cabinet:
-    brightness: 255
-    color_name: 'homeassistant'
-    state: 'on'
   light.bedroom_lamp:
     color_name: 'white'
     brightness: 255
     state: 'on'
-  light.bed:
-    color_name: 'homeassistant'
-    brightness: 255
-    state: 'on'
-  light.hallway:
-    brightness: 255
-    state: 'on'
-  light.living_room_main_light:
-    brightness: 255
-    state: 'on'
-  light.tv_lights:
+  light.living_room_light:
     brightness: 255
     state: 'on'
   light.living_room_wall_lights:

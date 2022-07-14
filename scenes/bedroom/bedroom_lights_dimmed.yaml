@@ -4,20 +4,9 @@ icon: mdi:lightbulb-on-outline
 entities:
   light.bedroom_ceiling_fixture:
     state: 'off'
-  light.bedroom_tv:
-    state: 'on'
-    brightness: 128
-    color_name: 'blue'
-  light.cabinet:
-    state: 'on'
-    brightness: 128
-    color_name: 'blue'
   light.bedroom_lamp:
     state: 'on'
     brightness: 128
     color_temp: 56
     color_name: 'white'
-  light.bed:
-    state: 'on'
-    brightness: 128
-    color_name: 'blue'
+

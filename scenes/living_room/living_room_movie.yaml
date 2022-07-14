@@ -6,13 +6,6 @@ entities:
   light.living_room_wall_lights:
     brightness: 23
     state: 'on'
-  light.tv_lights:
-    brightness: 8
-    rgb_color:
-      - 99
-      - 51
-      - 255
-    state: 'on'
   light.hallway_light:
     state: 'off'
   light.hallway_lamp:

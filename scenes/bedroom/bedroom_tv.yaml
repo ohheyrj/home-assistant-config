@@ -1,20 +1,10 @@
 ---
 name: Bedroom TV
 entities:
-  light.cabinet:
-    brightness: 255
-    color_name: 'homeassistant'
-    state: 'on'
   light.bedroom_lamp:
     brightness: 255
     color_name: 'homeassistant'
     state: 'on'
-  light.bedroom_tv:
-    brightness: 255
-    color_name: 'homeassistant'
-    state: 'on'
   light.bedroom_ceiling_fixture:
-    state: 'off'
-  light.bed:
     state: 'off'
 icon: mdi:television

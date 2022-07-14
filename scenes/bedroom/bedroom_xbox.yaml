@@ -1,20 +1,10 @@
 ---
 name: Bedroom Xbox
 entities:
-  light.cabinet:
+ light.bedroom_lamp:
+    brightness: 255
+    color_name: 'green'
+    state: 'on'
+ light.bedroom_ceiling_fixture:
     state: 'off'
-  light.bedroom_lamp:
-    brightness: 255
-    color_name: 'green'
-    state: 'on'
-  light.bedroom_tv:
-    brightness: 255
-    color_name: 'green'
-    state: 'on'
-  light.bedroom_ceiling_fixture:
-    state: 'off'
-  light.bed:
-    brightness: 255
-    color_name: 'green'
-    state: 'on'
 icon: mdi:microsoft-xbox

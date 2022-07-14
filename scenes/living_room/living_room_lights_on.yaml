@@ -7,9 +7,6 @@ entities:
   light.living_room_wall_lights:
     brightness: 255
     state: 'on'
-  light.tv_lights:
-    state: 'on'
-    brightness: 255
   light.standing_lamp:
     state: 'on'
     brightness: 255
