@@ -8,24 +8,15 @@ cards:
     entities:
       - entity: switch.air_freshener
     title: Plugs
-  - type: 'custom:mini-graph-card'
-    entities:
-      - entity: sensor.living_room_multi_sensor_2
-        color: lightblue
-    hours_to_show: 24
-    points_per_hour: 1
-    name: Living Room Humidity
-  - type: entities
+ - type: entities
     entities:
       - entity: light.living_room_light
       - entity: light.living_room_wall_lights
-      - entity: light.tv_lights
     title: Lights
   - type: glance
     entities:
       - scene.living_room_lights_off
       - scene.living_room_lights_on
-      - scene.living_room_watching_tv
     columns: 3
     show_name: true
     show_state: false
@@ -34,9 +25,7 @@ cards:
   - type: entities
     entities:
       - media_player.living_room_home
-      - media_player.ht_xt2_37e1d32_2
       - media_player.living_room_tv
-      - media_player.virgin
     title: Media Players
   - type: picture-glance
     title: Living Room Camera

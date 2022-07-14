@@ -4,19 +4,7 @@ path: environment
 icon: mdi:thermometer
 badges: []
 cards:
-  - type: horizontal-stack
-    cards:
-      - type: custom:mini-graph-card
-        name: Living Room Temp
-        entities:
-          - sensor.living_room_sensor_temperature
-        line_color: red
-      - type: custom:mini-graph-card
-        name: Living Room Humidity
-        entities:
-          - sensor.living_room_sensor_humidity
-        line_color: blue
-  - type: horizontal-stack
+ - type: horizontal-stack
     cards:
       - type: custom:mini-graph-card
         name: Hallway Temp

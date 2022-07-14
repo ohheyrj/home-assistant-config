@@ -24,7 +24,7 @@ cards:
   - type: entities
     entities:
       - entity: light.hallway_light
-      - entity: light.hallway_lamp
+      - entity: light.hall_lamp
     title: Lights
   - type: entities
     title: Plugs

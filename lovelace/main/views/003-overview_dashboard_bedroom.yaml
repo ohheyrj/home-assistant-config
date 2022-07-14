@@ -26,7 +26,7 @@ cards:
     title: Plugs
   - type: 'custom:mini-graph-card'
     entities:
-      - entity: sensor.bedroom_multi_sensor_2
+      - entity: sensor.bedroom_sensor_humidity
         color: lightblue
     hours_to_show: 24
     points_per_hour: 1
@@ -34,11 +34,8 @@ cards:
   - type: entities
     title: Lights
     entities:
-      - entity: light.bed
       - entity: light.bedroom_lamp
       - entity: light.bedroom_ceiling_fixture
-      - entity: light.cabinet
-      - entity: light.bedroom_tv
   - type: glance
     entities:
       - scene.bedroom_lights_dimmed
