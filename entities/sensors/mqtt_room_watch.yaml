@@ -1,0 +1,5 @@
+---
+platform: mqtt_room
+name: "Richard Watch"
+device_id: "apple:watch6-7"
+state_topic: "espresense/rooms"
