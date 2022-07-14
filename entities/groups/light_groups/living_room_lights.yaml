@@ -4,4 +4,3 @@ living_room_lights:
   entities:
     - light.living_room_light
     - light.living_room_wall_lights
-    - light.tv_lights

@@ -4,5 +4,4 @@ living_room:
   entities:
     - light.living_room_light
     - light.living_room_wall_lights
-    - light.tv_lights
     - switch.air_freshener_3
