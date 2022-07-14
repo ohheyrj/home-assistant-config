@@ -128,30 +128,9 @@ cards:
         variables:
           ulm_card_light_slider_name: Lamp
         entity: light.bedroom_lamp
-      - type: 'custom:button-card'
-        template: card_light_slider
-        variables:
-          ulm_card_light_slider_name: Bed
-        entity: light.bed
-      - type: custom:button-card
+     - type: custom:button-card
         template: edge
-  - type: horizontal-stack
-    cards:
-      - type: custom:button-card
-        template: edge
-      - type: 'custom:button-card'
-        template: card_light_slider
-        variables:
-          ulm_card_light_slider_name: Cabinet
-        entity: light.cabinet
-      - type: 'custom:button-card'
-        template: card_light_slider
-        variables:
-          ulm_card_light_slider_name: TV
-        entity: light.bedroom_tv
-      - type: custom:button-card
-        template: edge
-  - type: horizontal-stack
+ - type: horizontal-stack
     cards:
       - type: custom:button-card
         template: edge
