@@ -1,0 +1,4 @@
+---
+name: Telegram Home Assistant
+platform: telegram
+chat_id: !secret telegram_group_home_assistant_id
