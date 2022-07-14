@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<aircast>
+<common>
+<enabled>1</enabled>
+<stop_receiver>0</stop_receiver>
+<media_volume>1.0000</media_volume>
+<latency></latency>
+<codec>flac</codec>
+<artwork></artwork>
+<drift>0</drift>
+<metadata>1</metadata>
+<flush>1</flush>
+</common>
+<main_log>info</main_log>
+<cast_log>info</cast_log>
+<util_log>warn</util_log>
+<log_limit>-1</log_limit>
+<max_players>32</max_players>
+<ports>0:0</ports>
+<binding>?</binding>
+<device>
+<udn>189b0749f083559fb359d8cea98237c7</udn>
+<name>Second Bedroom speaker+</name>
+<mac>cc:cc:d5:e7:8c:81</mac>
+<enabled>1</enabled>
+</device>
+<device>
+<udn>83b2d91d9f6899c0437e7ad616f79de8</udn>
+<name>Living room TV+</name>
+<mac>cc:cc:d5:b2:28:8f</mac>
+<enabled>1</enabled>
+</device>
+<device>
+<udn>20c552b8feb00194dbdd36413ee25cef</udn>
+<name>Second Bedroom TV+</name>
+<mac>cc:cc:33:a6:27:3a</mac>
+<enabled>1</enabled>
+</device>
+<device>
+<udn>4670f8bf220d3874f0d157f759a24bd4</udn>
+<name>Hall display+</name>
+<mac>cc:cc:9a:54:ca:8c</mac>
+<enabled>1</enabled>
+</device>
+<device>
+<udn>cfcf048a2743f3beea5b25be92b5d42a</udn>
+<name>Living room Home+</name>
+<mac>cc:cc:33:1f:84:62</mac>
+<enabled>1</enabled>
+</device>
+</aircast>
