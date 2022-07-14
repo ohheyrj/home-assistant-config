@@ -41,7 +41,6 @@ cards:
           ulm_card_person_entity: person.richard
           ulm_card_person_use_entity_picture: true
           ulm_card_person_zone1: zone.work
-          ulm_card_person_zone2: zone.school
       - type: "custom:button-card"
         template: card_person
         variables:
