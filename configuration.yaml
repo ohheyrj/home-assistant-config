@@ -42,6 +42,30 @@ alexa:
       exclude_entity_globs:
         - light.living_room_wall_light_*
         - light.kitchen_light_*
+google_assistant:
+  project_id: !secret google_assistant_project_id
+  service_account: !include google_assistant_service_account.json
+  report_state: true
+  exposed_domains:
+    - light
+    - cover
+    - switch
+    - scene
+  entity_config:
+    switch.octoprint_cancel_print:
+      expose: false
+    switch.octoprint_connect_to_printer:
+      expose: false
+    switch.octoprint_psu:
+      expose: false
+    switch.octoprint_pause_print:
+      expose: false
+    switch.octoprint_shutdown_system:
+      expose: false
+    switch.octoprint_camera_snapshot:
+      expose: false
+    switch.octoprint_emergency_stop:
+      expose: false
 logger:
   default: warning
 

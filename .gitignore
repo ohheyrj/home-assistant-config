@@ -28,7 +28,7 @@ ip_bans.yaml
 Pipfile
 Pipfile.lock
 watchman_report.txt
-
+google_assistant_service_account.json
 # ESPHome ignores
 esphome/secrets.yaml
 esphome/**/
